@@ -1,0 +1,90 @@
+//Default color
+$white: #fff;
+$black: #000;
+
+//Asset base path
+$art-base-path: "../art";
+
+//Font family
+$font-text: 'Montserrat', sans-serif;;
+$font-icon: "Font Awesome 5 Pro";
+
+//Font Body
+$font-body-mobile: 1rem;
+$font-body-desktop: 1rem;
+
+//Font weight
+$regular: 400;
+$semi: 500;
+$bold: 700;
+
+//Font line-height
+$font-line-height: 1.5;
+
+//Colors
+
+$orient: #005789;
+$wild-sand: #F4F4F4;
+$trout: #4F5966;
+$turquoise: #00B6BA;
+$bay: #21507a;
+$silver: #b8b8b8;
+$cultured: #eeeeee;
+$athens: #f0f0f1;
+$mercury: #e8e8e8;
+
+$b25: #e5f6fc;
+$b300: #66caed;
+$b400: #00a8e0;
+$b500: #0086b3;
+$b600: #0079a1;
+$b700: #007298;
+$b800: #006b8f;
+$b900: #005e7d;
+$b1000: #00506b;
+
+$g100: #cfebd1;
+$g500: #3fae49;
+$g600: #00954c;
+$g800: #2c7a33;
+
+$n5: #F2F2F2;
+$n10: #E5E5E5;
+$n20: #CCCCCC;
+$n25: #f7f7f7;
+$n40: #999999;
+$n80: #333333;
+
+
+
+
+$n100: #000000;
+$n200: #d9d9d9;
+$n300: #bdbdbd;
+$n400: #a1a1a1;
+$n500: #818181;
+$n600: #6e6e6e;
+$n800: #404040;
+
+$o100: #feeac1;
+$o300: #fdc75f;
+$o500: #fca909;
+$o600: #e39808;
+
+$r10: #FAE5E5;
+$r20: #D00000;
+$r100: #f7bfbf;
+$r400: #e00000;
+$r500: #b30000;
+$r600: #a10000;
+$r800: #8f0000;
+
+//Screen sizes for media queries
+$width-xxl: 90rem;
+$width-xl: 75rem;
+$width-lg: 62rem;
+$width-md: 48rem;
+$max-width-md: 47.9375rem;
+$width-sm: 36rem;
+$width-xs: 30rem;
+$width-xxs: 20rem;

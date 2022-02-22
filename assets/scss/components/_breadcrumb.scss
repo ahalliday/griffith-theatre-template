@@ -1,0 +1,41 @@
+.breadcrumb {
+  background: none;
+  border-radius: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+
+  @media (min-width: $width-md) {
+    margin-bottom: 2.5rem;
+  }
+
+  .breadcrumb-item {
+    a {
+
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: $bold;
+      border-bottom: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.active {
+      a {
+        color: $n500;
+        font-weight: $regular;
+      }
+    }
+    + .breadcrumb-item {
+      &:before {
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 300;
+        content: "\f105";
+        font-size: .875rem;
+        color: $n100;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.progress-steps {
+  ul {
+    position: relative;
+    padding: 0 0 0 2.625rem;
+
+    li {
+      position: relative;
+      padding-left: 0.75rem;
+      list-style: none;
+      min-height: 10rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 33px;
+        height: 74%;
+        width: 2px;
+        border-left: 2px solid $n200;
+      }
+
+      &:after {
+        content: "\f058";
+        color: $n200;
+        width: 1.875rem;
+        height: 1.875rem;
+        position: absolute;
+        top: -0.625rem;
+        left: -2.3125rem;
+        font-family: "Font Awesome 5 Pro";
+        font-size: 1.875rem;
+      }
+
+      h5 {
+        color: $n500;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        margin-bottom: 0.25rem;
+      }
+      p {
+        &.date {
+          text-transform: uppercase;
+          margin-bottom: 0.25rem;
+        }
+      }
+
+      &.in-progress {
+        &:after {
+          content: "\f110";
+          color: $o500;
+        }
+        &:before {
+          border-left: 2px solid $o500;
+        }
+        h5 {
+          color: $n800;
+        }
+      }
+      &.completed {
+        &:after {
+          content: "\f058";
+          color: $g500;
+        }
+        &:before {
+          border-left: 2px solid $g500;
+        }
+        h5 {
+          color: $g800;
+        }
+      }
+      &:last-child {
+        &:before {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &.expandable-progress-steps {
+    .expand {
+      background: $white;
+      border-radius: 0.25rem;
+      padding: 1.5rem;
+      filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.12));
+      border-top: 0.5625rem solid $n200;
+
+      button {
+        color: $n500;
+        padding: 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        margin-bottom: 0.25rem;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+
+        i {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          color: $n500 !important;
+        }
+
+        &[aria-expanded="true"] {
+          i {
+            &:before {
+              content: "\f106";
+              font-family: "Font Awesome 5 Pro";
+              color: $b900;
+            }
+          }
+        }
+      }
+      ul {
+        padding: 0 0 0 1.875rem;
+
+        li {
+          min-height: auto;
+          list-style: disc;
+          padding-left: 0;
+
+          &:before,
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+        filter: drop-shadow(0px 16px 60px rgba(0, 0, 0, 0.1));
+      }
+      p {
+        margin-bottom: 0;
+      }
+      &.panel-expanded {
+        margin-bottom: 1rem;
+      }
+    }
+    .collapse {
+      padding-top: 0.625rem;
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+    ul {
+      li {
+        min-height: 18.75rem;
+
+        @media (min-width: 40rem) {
+          min-height: 15.625rem;
+        }
+        @media (min-width: $width-sm) {
+          min-height: 13.75rem;
+        }
+
+        @media (min-width: $width-lg) {
+          min-height: 11.25rem;
+        }
+
+        &:before {
+          height: 80%;
+
+          @media (min-width: 40rem) {
+            height: 76%;
+          }
+
+          @media (min-width: $width-lg) {
+            height: 72%;
+          }
+        }
+
+        &.in-progress {
+          .expand {
+            border-top: 0.5625rem solid $o500;
+
+            button {
+              color: $n800;
+            }
+          }
+        }
+        &.completed {
+          .expand {
+            border-top: 0.5625rem solid $g500;
+            filter: drop-shadow(0px 16px 60px rgba(0, 0, 0, 0.1));
+
+            button {
+              color: $g800;
+            }
+          }
+        }
+      }
+    }
+  }
+}

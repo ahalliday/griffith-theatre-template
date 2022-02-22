@@ -1,0 +1,222 @@
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: $white;
+
+  @media (min-width: $width-lg) {
+    margin-bottom: 2.8125rem;
+    padding-top: 0;
+  }
+  &-title {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      color: $n100;
+      margin-bottom: 0;
+    }
+  }
+  &-text {
+    text-align: center;
+
+    h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      color: $white;
+      font-weight: $semi;
+
+      @media (min-width: $width-lg) {
+        font-size: 1.875rem;
+        margin-bottom: 1.5625rem;
+      }
+    }
+    p {
+      color: $white;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+#Hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 0;
+  padding-top:0;
+  margin-bottom: 0;
+}
+#MainTiles {
+  margin-bottom: 0;
+  @media (min-width: $width-sm) {
+    padding-bottom: 0;
+  }
+  @media (min-width: $width-md) {
+    padding-top: 2.5rem;
+  }
+  .section-title {
+    @media (min-width: $width-sm) {
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      padding-left: 1.25rem;
+      border-left: 1rem solid transparent;
+      display: inline-block;
+
+      &:after {
+        display: inline-block;
+        content:'';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: .75rem 0 .75rem 1.25rem;
+        border-color: transparent transparent transparent $n100;
+        margin-left: 1rem;
+      }
+    }
+    .btn {
+      display: none;
+
+      @media (min-width: $width-sm) {
+        display: inline-block;
+      }
+    }
+  }
+  .btn-secondary {
+    width: 100%;
+  }
+}
+#Contact {
+  padding-bottom: 1.25rem;
+  margin-bottom:0;
+
+  @media (min-width: $width-md) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .contact-cta {
+    margin:0;
+    padding:0;
+    list-style: none;
+
+    @media (min-width: $width-md) {
+      display: flex;
+      margin:0 -0.9375rem;
+    }
+    li {
+      margin: 0;
+
+      @media (min-width: $width-md) {
+        max-width: 50%;
+        padding: 0 .9375rem;
+        flex: 1 1 50%;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2.375rem;
+        margin:0;
+
+        @media (min-width: $width-md) {
+          max-width: 22.5rem;
+          margin: 0 auto;
+        }
+      }
+      p {
+        color: $n80;
+        margin-bottom: 1rem;
+
+        @media (min-width: $width-md) {
+          max-width: 22.5rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      div {
+        margin-bottom: 2rem;
+
+        @media (min-width: $width-md) {
+          margin-bottom:0;
+        }
+        a {
+          width: 1.5rem;
+          margin: 0 .75rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+#Subscribe {
+  margin-bottom: 0;
+  
+  @media (min-width: $width-lg) {
+    padding-top: 2.5rem;
+  }
+
+  .section-content {
+    max-width: 37.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      color: $white;
+      margin-bottom: 1.5rem;
+
+      small {
+        display: block;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+    }
+    .form-control {
+      border:0 none;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 1rem;
+
+      @media (min-width: $width-sm) {
+        width: auto;
+      }
+    }
+    .row {
+      @media (min-width: $width-sm) {
+        margin-left: -0.25rem;
+        margin-right: -0.25rem;
+      }
+      > * {
+        @media (min-width: $width-sm) {
+          padding-left: .25rem;
+          padding-right: .25rem;
+        }
+      }
+    }
+  }
+}
+#Tips {
+  padding:0;
+}
+#Partners {
+  padding-top: 2.5rem;
+}
+#Logos {
+  padding-bottom: 0;
+
+  .section-title {
+    @media (min-width: $width-md) {
+      text-align: left;
+    }
+    h5 {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+}

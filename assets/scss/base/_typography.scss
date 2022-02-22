@@ -1,0 +1,253 @@
+body {
+  font-family: $font-text;
+  font-weight: $regular;
+  color: $n80;
+  line-height: $font-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $font-body-desktop;
+  line-height: 1.5rem;
+}
+p {
+  margin-bottom: 1rem;
+  font-weight: $regular;
+
+  a {
+    color: $orient;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $orient;
+    }
+  }
+  &.lead {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.5rem;
+    font-weight: $regular;
+  }
+}
+a {
+  color: $orient;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $orient;
+    text-decoration: none;
+  }
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5rem;
+}
+address {
+  margin: 0 0 1.5rem;
+}
+pre {
+  font-family: $font-text;
+  font-size: $font-body-mobile;
+  line-height: $font-line-height;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: .625rem;
+
+  @media (min-width: $width-lg) {
+    font-size: $font-body-desktop;
+  }
+}
+code,
+kbd,
+tt,
+var {
+  font-size: .75rem;
+}
+abbr,
+acronym {
+  cursor: help;
+}
+mark,
+ins {
+  text-decoration: none;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $font-text;
+  line-height: 1.5;
+  font-weight: $bold;
+  margin-bottom: .75rem;
+  color: $n100;
+}
+h1 {
+  font-size: 1.875rem;
+}
+h2 {
+  font-size: 1.625rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-weight: $semi;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+
+  @media (min-width: $width-md) {
+    font-size: 1rem;
+    margin: 0px 0px 0.5rem;
+  }
+  &.normal {
+    text-transform: none;
+    color: $n800;
+  }
+  &.label {
+    font-weight: $regular;
+  }
+}
+ul {
+  padding-left: 1.5625rem;
+  list-style: disc;
+
+  li {
+    margin-bottom: 1.25rem;
+
+    a {
+      font-size: 1rem;
+      line-height: 1.5625rem;
+      font-weight: $regular;
+      color: $n600;
+
+      &:hover {
+        color: $b700;
+      }
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+  }
+}
+ol {
+  padding-left: 1.5625rem;
+
+  li {
+    ol {
+      padding-left: 1.5rem;
+    }
+  }
+
+  &.nested {
+    counter-reset: item;
+
+    li {
+      position: relative;
+      list-style-type: none;
+
+      &:before {
+        content: counters(item, ".", decimal) ".";
+        counter-increment: item;
+        position: absolute;
+        margin-right: 100%;
+        right: 10px;
+      }
+    }
+    .nested {
+      counter-reset: subitem;
+
+      li {
+        &:before {
+          content: counter(subitem, lower-alpha) ".";
+          counter-increment: subitem;
+        }
+      }
+
+      .nested {
+        li {
+          list-style-type: lower-roman;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.page-wrapper {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    color: $n100;
+    font-weight: $bold;
+  }
+}
+.page-intro {
+  padding-bottom: 2.125rem;
+
+  &:not(:first-child){
+    padding-bottom:0;
+    padding-top: 2.125rem;
+  }
+}
+.news {
+  h1 {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: $width-md) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &-featured {
+    padding-bottom: 2.5rem;
+
+    @media (min-width: $width-lg) {
+      padding-bottom: 5rem;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 1.25rem;
+    }
+    h6 {
+      color: $bay;
+      font-size: 1rem;
+      line-height: normal;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.pagination {
+  margin-bottom: 0;
+
+  li {
+    list-style: none;
+    border: none;
+    margin-right: 0.125rem;
+
+    .page-link {
+      padding: 0 1rem;
+      text-align: center;
+      border-radius: 0.25rem;
+      border: none;
+      height: 2rem;
+      line-height: 2rem;
+      font-weight: $regular;
+      font-size: 1rem;
+
+      @media (min-width: $width-sm) {
+        padding: 0 0.71875rem;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &.disabled {
+      a {
+        color: $n20 !important;
+      }
+    }
+    &.active {
+      .page-link {
+        color: $white;
+      }
+    }
+  }
+}

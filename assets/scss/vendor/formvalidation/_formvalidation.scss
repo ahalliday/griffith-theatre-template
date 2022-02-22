@@ -1,0 +1,710 @@
+.fv-sr-only {
+	display: none;
+}
+.fv-plugins-framework {
+	input {
+		&::-ms-clear {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+	textarea {
+		&::-ms-clear {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+.fv-plugins-icon-container {
+	position: relative;
+}
+.fv-plugins-icon {
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+.fv-plugins-tooltip {
+	position: absolute;
+	z-index: 10000;
+	.fv-plugins-tooltip__content {
+		background: #000;
+		border-radius: 3px;
+		color: #eee;
+		padding: 10px;
+		position: relative;
+		&:before {
+			border: 8px solid transparent;
+			content: '';
+			position: absolute;
+		}
+	}
+}
+.fv-plugins-tooltip--hide {
+	opacity: 0;
+}
+.fv-plugins-tooltip--top-left {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-top-color: #000;
+			left: 8px;
+			top: 100%;
+		}
+	}
+}
+.fv-plugins-tooltip--top {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-top-color: #000;
+			left: 50%;
+			margin-left: -8px;
+			top: 100%;
+		}
+	}
+}
+.fv-plugins-tooltip--top-right {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-top-color: #000;
+			right: 8px;
+			top: 100%;
+		}
+	}
+}
+.fv-plugins-tooltip--right {
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-right-color: #000;
+			margin-top: -8px;
+			right: 100%;
+			top: 50%;
+		}
+	}
+}
+.fv-plugins-tooltip--bottom-right {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-bottom-color: #000;
+			bottom: 100%;
+			right: 8px;
+		}
+	}
+}
+.fv-plugins-tooltip--bottom {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-bottom-color: #000;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -8px;
+		}
+	}
+}
+.fv-plugins-tooltip--bottom-left {
+	margin-top: 8px;
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-bottom-color: #000;
+			bottom: 100%;
+			left: 8px;
+		}
+	}
+}
+.fv-plugins-tooltip--left {
+	.fv-plugins-tooltip__content {
+		&:before {
+			border-left-color: #000;
+			left: 100%;
+			margin-top: -8px;
+			top: 50%;
+		}
+	}
+}
+.fv-plugins-tooltip-icon {
+	cursor: pointer;
+	pointer-events: inherit;
+}
+.fv-plugins-bootstrap {
+	.fv-help-block {
+		color: #dc3545;
+		font-size: 80%;
+		margin-top: .25rem;
+	}
+	.is-invalid {
+		~ {
+			.form-check-label {
+				color: inherit;
+			}
+		}
+	}
+	.is-valid {
+		~ {
+			.form-check-label {
+				color: inherit;
+			}
+		}
+	}
+	.has-danger {
+		.fv-plugins-icon {
+			color: #dc3545;
+		}
+	}
+	.has-success {
+		.fv-plugins-icon {
+			color: #28a745;
+		}
+	}
+	.fv-plugins-icon {
+		height: 38px;
+		line-height: 38px;
+		width: 38px;
+	}
+	.input-group {
+		~ {
+			.fv-plugins-icon {
+				z-index: 3;
+			}
+		}
+	}
+	.form-group.row {
+		.fv-plugins-icon {
+			right: 15px;
+		}
+		.fv-plugins-icon-check {
+			top: -7px;
+		}
+	}
+	&:not(.form-inline) {
+		label {
+			~ {
+				.fv-plugins-icon {
+					top: 32px;
+				}
+				.fv-plugins-icon-check {
+					top: 25px;
+				}
+			}
+		}
+		label.sr-only {
+			~ {
+				.fv-plugins-icon-check {
+					top: -7px;
+				}
+			}
+		}
+	}
+}
+.fv-plugins-bootstrap.form-inline {
+	.form-group {
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: auto;
+	}
+}
+.fv-plugins-bootstrap3 {
+	.help-block {
+		margin-bottom: 0;
+	}
+	.input-group {
+		~ {
+			.form-control-feedback {
+				z-index: 4;
+			}
+		}
+	}
+}
+.fv-plugins-bootstrap3.form-inline {
+	.form-group {
+		vertical-align: top;
+	}
+}
+.fv-plugins-bulma {
+	.field.has-addons {
+		flex-wrap: wrap;
+		&::after {
+			content: '';
+			width: 100%;
+		}
+		.fv-plugins-message-container {
+			order: 1;
+		}
+	}
+	.icon.fv-plugins-icon-check {
+		top: -4px;
+	}
+	.fv-has-error {
+		.input {
+			border: 1px solid #ff3860;
+		}
+		.textarea {
+			border: 1px solid #ff3860;
+		}
+	}
+	.fv-has-success {
+		.input {
+			border: 1px solid #23d160;
+		}
+		.textarea {
+			border: 1px solid #23d160;
+		}
+	}
+}
+.fv-plugins-foundation {
+	.fv-plugins-icon {
+		height: 39px;
+		line-height: 39px;
+		right: 0;
+		width: 39px;
+	}
+	.grid-padding-x {
+		.fv-plugins-icon {
+			right: 15px;
+		}
+	}
+	.fv-plugins-icon-container {
+		.cell {
+			position: relative;
+		}
+	}
+	[type="checkbox"] {
+		~ {
+			.fv-plugins-icon {
+				top: -7px;
+				top: -7px;
+			}
+		}
+	}
+	.form-error {
+		display: block;
+	}
+	.fv-row__success {
+		.fv-plugins-icon {
+			color: #3adb76;
+		}
+	}
+	.fv-row__error {
+		label {
+			color: #cc4b37;
+		}
+		fieldset {
+			legend {
+				color: #cc4b37;
+			}
+		}
+		.fv-plugins-icon {
+			color: #cc4b37;
+		}
+	}
+}
+.fv-plugins-foundation.fv-stacked-form {
+	.fv-plugins-message-container {
+		width: 100%;
+	}
+	label {
+		.fv-plugins-icon {
+			top: 25px;
+		}
+	}
+	fieldset {
+		[type="checkbox"] {
+			~ {
+				.fv-plugins-icon {
+					top: 25px;
+				}
+			}
+		}
+		[type="radio"] {
+			~ {
+				.fv-plugins-icon {
+					top: 25px;
+				}
+			}
+		}
+	}
+}
+.fv-plugins-materialize {
+	.fv-plugins-icon {
+		height: 42px;
+		line-height: 42px;
+		width: 42px;
+	}
+	.fv-plugins-icon-check {
+		top: -10px;
+	}
+	.fv-invalid-row {
+		.helper-text {
+			color: #F44336;
+		}
+		.fv-plugins-icon {
+			color: #F44336;
+		}
+	}
+	.fv-valid-row {
+		.helper-text {
+			color: #4CAF50;
+		}
+		.fv-plugins-icon {
+			color: #4CAF50;
+		}
+	}
+}
+.fv-plugins-milligram {
+	.fv-plugins-icon {
+		height: 38px;
+		line-height: 38px;
+		width: 38px;
+	}
+	.column {
+		position: relative;
+		.fv-plugins-icon {
+			right: 10px;
+		}
+	}
+	.fv-plugins-icon-check {
+		top: -6px;
+	}
+	.fv-plugins-message-container {
+		margin-bottom: 15px;
+	}
+	.fv-invalid-row {
+		.fv-help-block {
+			color: red;
+		}
+		.fv-plugins-icon {
+			color: red;
+		}
+	}
+	.fv-valid-row {
+		.fv-help-block {
+			color: green;
+		}
+		.fv-plugins-icon {
+			color: green;
+		}
+	}
+}
+.fv-plugins-milligram.fv-stacked-form {
+	.fv-plugins-icon {
+		top: 30px;
+	}
+	.fv-plugins-icon-check {
+		top: 24px;
+	}
+}
+.fv-plugins-mini {
+	.fv-plugins-icon {
+		height: 42px;
+		line-height: 42px;
+		width: 42px;
+		top: 4px;
+	}
+	.fv-plugins-icon-check {
+		top: -8px;
+	}
+	.fv-plugins-message-container {
+		margin: calc(var(--universal-margin) / 2);
+	}
+	.fv-invalid-row {
+		.fv-help-block {
+			color: var(--input-invalid-color);
+		}
+		.fv-plugins-icon {
+			color: var(--input-invalid-color);
+		}
+	}
+	.fv-valid-row {
+		.fv-help-block {
+			color: #308732;
+		}
+		.fv-plugins-icon {
+			color: #308732;
+		}
+	}
+}
+.fv-plugins-mini.fv-stacked-form {
+	.fv-plugins-icon {
+		top: 28px;
+	}
+	.fv-plugins-icon-check {
+		top: 20px;
+	}
+}
+.fv-plugins-mui {
+	.fv-plugins-icon {
+		height: 32px;
+		line-height: 32px;
+		width: 32px;
+		top: 15px;
+		right: 4px;
+	}
+	.fv-plugins-icon-check {
+		top: -6px;
+		right: -10px;
+	}
+	.fv-plugins-message-container {
+		margin: 8px 0;
+	}
+	.fv-invalid-row {
+		.fv-help-block {
+			color: #F44336;
+		}
+		.fv-plugins-icon {
+			color: #F44336;
+		}
+	}
+	.fv-valid-row {
+		.fv-help-block {
+			color: #4CAF50;
+		}
+		.fv-plugins-icon {
+			color: #4CAF50;
+		}
+	}
+}
+.fv-plugins-pure {
+	.fv-plugins-icon {
+		height: 36px;
+		line-height: 36px;
+		width: 36px;
+	}
+	.fv-has-error {
+		label {
+			color: #CA3C3C;
+		}
+		.fv-help-block {
+			color: #CA3C3C;
+		}
+		.fv-plugins-icon {
+			color: #CA3C3C;
+		}
+	}
+	.fv-has-success {
+		label {
+			color: #1CB841;
+		}
+		.fv-help-block {
+			color: #1CB841;
+		}
+		.fv-plugins-icon {
+			color: #1CB841;
+		}
+	}
+}
+.fv-plugins-pure.pure-form-aligned {
+	.fv-help-block {
+		margin-top: 5px;
+		margin-left: 180px;
+	}
+	.fv-plugins-icon-check {
+		top: -9px;
+	}
+}
+.fv-plugins-pure.pure-form-stacked {
+	.pure-control-group {
+		margin-bottom: 8px;
+	}
+	.fv-plugins-icon {
+		top: 22px;
+	}
+	.fv-plugins-icon-check {
+		top: 13px;
+	}
+	.fv-sr-only {
+		~ {
+			.fv-plugins-icon {
+				top: -9px;
+			}
+		}
+	}
+}
+.fv-plugins-semantic.ui.form {
+	.fields.error {
+		label {
+			color: #9f3a38;
+		}
+	}
+}
+.fv-plugins-semantic {
+	.error {
+		.fv-plugins-icon {
+			color: #9f3a38;
+		}
+	}
+	.fv-plugins-icon-check {
+		right: 7px;
+	}
+}
+.fv-plugins-shoelace {
+	.input-group {
+		margin-bottom: 0;
+	}
+	.fv-plugins-icon {
+		height: 32px;
+		line-height: 32px;
+		width: 32px;
+		top: 28px;
+	}
+	.row {
+		.fv-plugins-icon {
+			right: 16px;
+			top: 0;
+		}
+	}
+	.fv-plugins-icon-check {
+		top: 24px;
+	}
+	.fv-sr-only {
+		~ {
+			.fv-plugins-icon {
+				top: -4px;
+			}
+			div {
+				.fv-plugins-icon {
+					top: -4px;
+				}
+			}
+		}
+	}
+	.input-valid {
+		.fv-help-block {
+			color: #2ecc40;
+		}
+		.fv-plugins-icon {
+			color: #2ecc40;
+		}
+	}
+	.input-invalid {
+		.fv-help-block {
+			color: #ff4136;
+		}
+		.fv-plugins-icon {
+			color: #ff4136;
+		}
+	}
+}
+.fv-plugins-spectre {
+	.form-checkbox {
+		.form-icon {
+			margin: 0;
+		}
+	}
+	.form-radio {
+		.form-icon {
+			margin: 0;
+		}
+	}
+	.input-group {
+		.fv-plugins-icon {
+			z-index: 2;
+		}
+	}
+	&:not(.form-horizontal) {
+		.form-group.has-error {
+			.fv-plugins-icon {
+				margin-top: 4px;
+			}
+			.fv-plugins-icon-check {
+				margin-top: 0;
+			}
+		}
+		.form-group.has-success {
+			.fv-plugins-icon {
+				margin-top: 15px;
+			}
+			.fv-plugins-icon-check {
+				margin-top: 0;
+			}
+		}
+	}
+}
+.fv-plugins-tachyons {
+	.fv-plugins-icon {
+		height: 36px;
+		line-height: 36px;
+		width: 36px;
+	}
+	.fv-plugins-icon-check {
+		top: -7px;
+	}
+}
+.fv-plugins-tachyons.fv-stacked-form {
+	.fv-plugins-icon {
+		top: 34px;
+	}
+	.fv-plugins-icon-check {
+		top: 24px;
+	}
+}
+.fv-plugins-turret {
+	.fv-plugins-icon {
+		height: 48px;
+		line-height: 48px;
+		width: 48px;
+	}
+	.fv-invalid-row {
+		.form-message {
+			color: #c00;
+		}
+		.fv-plugins-icon {
+			color: #c00;
+		}
+	}
+	.fv-valid-row {
+		.form-message {
+			color: #00b300;
+		}
+		.fv-plugins-icon {
+			color: #00b300;
+		}
+	}
+}
+.fv-plugins-turret.fv-stacked-form {
+	.fv-plugins-icon {
+		top: 37px;
+	}
+	.fv-plugins-icon-check {
+		top: 24px;
+	}
+}
+.fv-plugins-uikit {
+	.fv-plugins-icon {
+		height: 40px;
+		line-height: 40px;
+		top: 25px;
+		width: 40px;
+	}
+}
+.fv-plugins-uikit.uk-form-horizontal {
+	.fv-plugins-icon {
+		top: 0;
+	}
+	.fv-plugins-icon-check {
+		top: -11px;
+	}
+}
+.fv-plugins-uikit.uk-form-stacked {
+	.fv-plugins-icon-check {
+		top: 15px;
+	}
+	.fv-no-label {
+		.fv-plugins-icon {
+			top: 0;
+		}
+		.fv-plugins-icon-check {
+			top: -11px;
+		}
+	}
+}
+.fv-plugins-wizard--step {
+	display: none;
+}
+.fv-plugins-wizard--active {
+	display: block;
+}

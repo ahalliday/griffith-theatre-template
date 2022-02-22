@@ -1,0 +1,50 @@
+.flight-info {
+  background: $white;
+  max-width: 55.625rem;
+  margin:0 auto;
+  box-shadow: 0rem 0rem .625rem 0rem rgba(0,0,0,0.1);
+
+  .nav {
+    border-bottom: .0625rem solid $wild-sand;
+
+    @media (min-width: $width-md) {
+      border:0 none;
+    }
+
+    li {
+      flex-basis: 50%;
+      margin:0;
+
+      .nav-link {
+        border-radius: 0;
+        border:0 none;
+        margin:0;
+        font-size: 1.25rem;
+        line-height: 3.125rem;
+        height: 3.125rem;
+        padding:0;
+        text-align: center;
+        color: $black;
+        font-weight: $bold;
+
+        @media (min-width: $width-md) {
+          font-size: .875rem;
+          line-height: 2.75rem;
+          height: 2.75rem;
+          color: $trout;
+        }
+        &.active {
+          color: $white;
+          background: $orient;
+        }
+      }
+    }
+  }
+  .tab-content {
+    padding: 1.5rem .9375rem .9375rem;
+
+    @media (min-width: $width-md) {
+      padding:0;
+    }
+  }
+}

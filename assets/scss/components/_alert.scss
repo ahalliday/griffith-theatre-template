@@ -1,0 +1,154 @@
+.alert {
+  filter: drop-shadow(0px 16px 60px rgba(0, 0, 0, 0.1));
+  border-radius: 0.25rem;
+  padding: 1rem;
+  position: relative;
+  border: none;
+
+  i {
+    font-size: 1.875rem;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  a {
+    opacity: 1;
+  }
+  p {
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    margin-bottom: 0;
+
+    strong {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+    a {
+      font-size: 1rem;
+      text-decoration: underline;
+      line-height: 1.8125rem;
+    }
+  }
+  .close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    i {
+      position: static;
+      transform: none;
+    }
+  }
+  &-top-fw {
+    margin: 0;
+    padding: 1rem 2rem 1rem;
+    border-radius: 0;
+    background: $orient;
+    text-align: center;
+    filter: none;
+
+    .container-lg {
+      position: relative;
+    }
+
+    p {
+      margin: 0;
+      font-size: .875rem;
+      color: $white;
+      padding:0;
+
+      strong {
+        display: inline-block;
+        font-size: .875rem;
+        line-height: 1.5;
+      }
+
+      a {
+        font-weight: $semi;
+        color: $silver;
+      }
+    }
+    .close {
+      position: absolute;
+      right: -0.625rem;
+      top: -0.625rem;
+      transform: none;
+      color: $white;
+
+      @media (min-width: $width-lg) {
+        right:0;
+        top: -50%;
+        transform: translateY(50%);
+        margin-top: .125rem;
+      }
+      i {
+        position: static;
+        transform: none;
+        font-size: 1rem;
+      }
+    }
+    .alert-inner {
+      padding: 1.5rem;
+      position: relative;
+
+      @media (min-width: $width-lg) {
+        padding: 1.5rem;
+      }
+    }
+  }
+  &-success {
+    background: $g100;
+
+    i {
+      color: $g500;
+    }
+
+    p {
+      color: $g600;
+
+      strong {
+        color: $g800;
+      }
+      a {
+        color: $g600;
+      }
+    }
+  }
+  &-danger {
+    background: $r100;
+
+    i {
+      color: $r500;
+    }
+    p {
+      color: $r600;
+
+      strong {
+        color: $r800;
+      }
+      a {
+        color: $r600;
+      }
+    }
+  }
+  &-warning {
+    background: $o100;
+
+    i {
+      color: $o500;
+    }
+    p {
+      color: $n600;
+
+      strong {
+        color: $n800;
+      }
+      a {
+        color: $n600;
+      }
+    }
+  }
+}

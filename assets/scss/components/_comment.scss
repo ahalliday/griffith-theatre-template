@@ -1,0 +1,83 @@
+.post-list {
+  list-style: none;
+  padding: 1.5rem 0 0 0;
+
+  li {
+    padding: 0 0 2rem 2.75rem;
+    position: relative;
+    border-bottom: 0.0625rem solid #eeeeee;
+    margin-bottom: 2rem;
+    list-style: none;
+
+    @media (min-width: $width-md) {
+      padding-left: 5.5rem;
+    }
+
+    &.multi-thread {
+      border-bottom: 0 none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+
+      @media (min-width: $width-md) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3125rem;
+
+    strong {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      color: $n800;
+    }
+    span {
+      color: $n300;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+  .post-content {
+    p {
+      margin-bottom: 0.25rem;
+    }
+    > a {
+      color: $n800;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: $bold;
+      margin-right: 1.3125rem;
+    }
+  }
+  ul {
+    margin: 2rem 0 0 -2.75rem;
+    padding: 2rem 0 0 -2.75rem;
+    padding-top: 2rem;
+    border-top: 0.0625rem solid #eeeeee;
+
+    @media (min-width: $width-md) {
+      margin-left: -5.5rem;
+      padding-left: 5.5rem;
+    }
+  }
+}
+.comment-section {
+  .btn {
+    margin-bottom: 2.5rem;
+  }
+}

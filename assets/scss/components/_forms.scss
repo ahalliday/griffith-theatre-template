@@ -1,0 +1,304 @@
+.custom-control {
+  &-label {
+    color: $n800;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-left: 0.75rem;
+    font-weight: $semi;
+
+    &:before {
+      top: 0.625rem;
+      background: $n200;
+      border: none;
+      height: 0.75rem;
+      width: 2.125rem !important;
+    }
+    &:after {
+      top: 0.3125rem !important;
+      background: $n500 !important;
+      width: 1.25rem !important;
+      height: 1.25rem !important;
+      border-radius: 50% !important;
+      left: -2.25rem !important;
+    }
+    img {
+      margin-left: 0.75rem;
+    }
+  }
+}
+.custom-control-input {
+  &:checked {
+    ~ .custom-control-label {
+      &:before {
+        border: none;
+      }
+      &:after {
+        left: -2.0625rem !important;
+      }
+    }
+  }
+}
+form {
+  fieldset {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+
+    .form-group {
+      &.required {
+        > label {
+          &:after {
+            content: "*";
+            color: $r400;
+          }
+        }
+      }
+      i {
+        &.fv-plugins-icon {
+          width: auto;
+          right: 1.625rem;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+      &.search_keyboard {
+        display: none;
+      }
+    }
+
+    label {
+      font-weight: $regular;
+      color: $n800;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.5rem;
+
+      @media (min-width: $width-md) {
+        margin-bottom: 0.125rem;
+      }
+
+      span {
+        color: $r400;
+        font-size: 0.75rem;
+      }
+    }
+    .form-control {
+      border: 0.0625rem solid $n200;
+      border-radius: 0;
+      padding: 0.6875rem 0.75rem;
+      color: $n800;
+      margin-bottom: .5rem;
+      height: auto;
+
+      &:focus {
+        border: 0.0625rem solid $n200;
+      }
+
+      &.error,
+      &.is-invalid {
+        border: 0.0625rem solid $r20;
+        background: $r10;
+      }
+      &.disabled {
+        background: $n5;
+        pointer-events: none;
+      }
+    }
+    .error {
+      color: $r20 !important;
+    }
+    .fv-help-block {
+      color: $r20 !important;
+      font-size: 0.75rem !important;
+      line-height: 1.125rem !important;
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+    .info {
+      color: $n600;
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      margin-bottom: 0;
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6875rem;
+
+      label {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: $n600;
+      }
+    }
+    textarea {
+      resize: none;
+      max-height: 13.5rem;
+      height: 7rem !important;
+    }
+  }
+  select {
+    background-image: url("../images/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    -webkit-appearance: none; /*Removes default chrome and safari style*/
+    -moz-appearance: none; /*Removes default style Firefox*/
+    appearance: none;
+
+    &.form-control {
+      padding: 0 1.875rem 0 0.75rem;
+      color: $n500;
+      height: 2.5625rem;
+      line-height: 2.5625rem;
+
+      @media (min-width: $width-md) {
+        height: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &.custom-search {
+    fieldset {
+      background: $n25;
+      border-radius: 1.25rem;
+      position: relative;
+      padding: 0.5rem 1rem;
+
+      input {
+        border: none;
+        background: none;
+        padding-right: 1.875rem;
+        width: 100%;
+        outline: none;
+        color: $n600;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+      button:not(.btn-static) {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        i {
+          color: $n500;
+        }
+      }
+    }
+  }
+  &.custom-form {
+    .form-control {
+      margin-bottom: 0.25rem;
+    }
+  }
+  &.search {
+    position: relative;
+
+    fieldset {
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 0.75rem;
+
+      @media (min-width: $width-md) {
+        border: 0.0625rem solid $n200;
+        border-radius: 0.25rem;
+        background: $white;
+        padding: 1.125rem 1.5rem;
+        margin-bottom: 0;
+      }
+
+      label {
+        margin-bottom: 0;
+        position: absolute;
+        top: 0.875rem;
+        left: 0.75rem;
+        transition: 0.2s;
+        color: $n500;
+        pointer-events: none;
+
+        @media (min-width: $width-md) {
+          top: 1.875rem;
+          left: 1.4375rem;
+        }
+      }
+
+      .form-control {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        color: $n800;
+        font-weight: $semi;
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        background: $white;
+        border-radius: 0.25rem;
+        border: 0.0625rem solid $n200;
+        padding: 0.9375rem 0.75rem;
+        height: auto;
+        margin-bottom: 0;
+
+        @media (min-width: $width-md) {
+          border: none;
+          border-radius: 0;
+          background: none;
+          padding-right: 7.75rem;
+          padding-left: 0;
+          font-size: 1.5rem;
+          line-height: 2.25rem;
+          padding-bottom: 0 !important;
+        }
+
+        &:focus,
+        &:valid {
+          outline: none;
+          padding: 1.4375rem 0.75rem 0.5rem;
+
+          ~ label {
+            top: 0.5rem;
+            font-size: 0.75rem;
+            line-height: 1.125rem;
+
+            @media (min-width: $width-md) {
+              font-size: 0.875rem;
+              line-height: 1.375rem;
+              top: 0.5rem;
+            }
+          }
+          @media (min-width: $width-md) {
+            padding: 0.875rem 0.75rem 0 0;
+          }
+        }
+      }
+    }
+    .btn {
+      height: 2.75rem;
+      position: static;
+      top: 0;
+      transform: none;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: $semi;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 0;
+
+      @media (min-width: $width-md) {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.125rem;
+        max-width: 6.5rem;
+        margin-top: 0.3125rem;
+      }
+    }
+  }
+}

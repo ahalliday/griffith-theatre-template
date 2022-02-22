@@ -1,0 +1,342 @@
+$orange: #F58220;
+$orange-shade: #F9B479; // Carousel Arrow left & Right 
+$orange-tint: #FEF9F4; // Background #MainTiles
+
+
+.orange {
+  .btn {
+    &.btn-primary {
+      background-color: $orange;
+  
+      &:hover,
+      &:active {
+        background: $orange-shade;
+      }
+      &:focus,
+      &.btn-active {
+        background: $orange-shade;
+      }
+    }
+    &.btn-secondary {
+      color: $orange;
+      border-color: $orange;
+
+      &:hover,
+      &:focus {
+        color: $orange-shade;
+        border-color: $orange-shade;
+      }
+      &.btn-ghost-active {
+        color: $orange;
+      }
+    }
+    &.btn-link {
+      color: $orange;
+  
+      &:hover,
+      &.btn-link-active {
+        color: $orange-shade;
+      }
+    }
+  }
+  p {
+    a {
+      color: $orange;
+  
+      &:hover,
+      &:focus,
+      &:active {
+        color: $orange;
+      }
+    }
+  }
+  a {
+    color: $orange;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      color: $orange;
+    }
+  }
+  &.show-mbl-menu {
+    #NavBar {
+      border-bottom-color: $orange;
+    }
+  }
+  
+  .nav-list {
+    li {
+      &.active {
+        > a {
+          color: $orange;
+        }
+      }
+    }
+    a {
+      &:hover {
+        color: $orange;
+      }
+    }
+    > li {
+      &.dropdown {
+
+        &.show {
+          > a {
+            color: $orange;
+          }
+        }
+        ul {
+          li {
+            &.active {
+              a {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #HeroCarousel {
+    .carousel-indicators {
+      li {
+        background: $orange;
+      }
+    }
+    .carousel-control {
+      background: $orange-shade;
+    }
+  }
+  #MainTiles {
+    background: $orange-tint;
+
+    .section-title {
+      h2 {
+        border-left-color: $orange;
+      }
+    }
+  }
+  .performance-list {
+    li {
+      h5 {
+        color: $orange;
+      }
+      &.with-overlay {
+        .img {
+          .status {
+            strong {
+              color: $orange;
+              border-color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+  #Subscribe,
+  #Footer,
+  .scrollTo {
+    background: $orange;
+  }
+  #Tips {
+    background: $orange-tint;
+  }
+  .badge {
+    &-primary {
+      background: $orange;
+    }
+  }
+  .tooltip {
+    &-inner {
+      background-color: $orange;
+    }
+    &.bs-tooltip-auto[x-placement^="top"],
+    &.bs-tooltip-top {
+      .arrow {
+        &:before {
+          border-top-color: $orange;
+        }
+      }
+    }
+    &.bs-tooltip-auto[x-placement^="right"],
+    &.bs-tooltip-right {
+      .arrow {
+        &:before {
+          border-right-color: $orange;
+        }
+      }
+    }
+    &.bs-tooltip-auto[x-placement^="bottom"],
+    &.bs-tooltip-bottom {
+      .arrow {
+        &:before {
+          border-bottom-color: $orange;
+        }
+      }
+    }
+    &.bs-tooltip-auto[x-placement^="left"],
+    &.bs-tooltip-left {
+      .arrow {
+        &:before {
+          border-left-color: $orange;
+        }
+      }
+    }
+  }
+  .card {
+    &-grid {
+      ul {
+        li {
+          a:not(.btn) {
+            &:hover {
+              border-color: $orange;
+  
+              h5 {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-advertisement {
+      ul {
+        li { 
+          &:hover {
+            border-color: $orange;
+          }
+        }
+      }
+    }
+    &-small {
+      li {
+  
+        &:hover {
+          a {
+            color: $orange;
+          }
+        }
+        a {
+          &:hover {
+            border-color: $orange;
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  .carousel {
+    &-custom {
+      .owl-carousel {
+        .owl-nav {
+          button {
+            background: $orange;
+          }
+        }
+      }
+      .owl-stage-outer {
+        .owl-stage {
+          .owl-item {
+            border-color: $orange;
+  
+            &:hover {
+              border-color: $orange;
+            } 
+            .carousel-slide-item {
+              border-color: $orange;
+  
+              a {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+      .owl-dots {
+        .owl-dot {
+          &.active {
+            background: $orange !important;
+          }
+        }
+      }
+    }
+  }
+  .accordion {
+    .card {
+      &-header {
+        background: $orange;
+      }
+    }
+  }
+  .social-media {
+    ul {
+      li {
+        a {
+          i {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+  
+    thead {
+      tr {
+        th {
+          background: $orange;
+        }
+      }
+    }
+  }
+  .pagination { 
+    li {
+      .page-link {
+        color: $orange;
+
+        &:hover {
+          background: $orange;
+        }
+      }
+      &.active {
+        .page-link {
+          background: $orange;
+        }
+      }
+    }
+  }
+  .custom-control-input {
+    &:checked {
+      ~ .custom-control-label {
+        color: $orange;
+  
+        &:before {
+          background: $orange-shade;
+        }
+        &:after {
+          background: $orange !important;
+        }
+      }
+    }
+  }
+  .stats {
+    .stat-box {
+      p {
+        strong {
+          color: $orange;
+        }
+      }
+    }
+  }
+  .contextual-stat-box {
+    .desc {
+      p {
+        strong {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
