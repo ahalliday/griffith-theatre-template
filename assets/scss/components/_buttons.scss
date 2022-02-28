@@ -6,7 +6,7 @@ button {
   padding: 0 1rem;
   line-height: 3rem;
   height: 3rem;
-  border-radius: .125rem;
+  border-radius: 0;
   border: 0 none;
   font-size: 1rem;
   font-weight: $bold;
@@ -122,6 +122,30 @@ button {
     &:hover,
     &:focus {
       background: $white;
+    }
+    &-inactive {
+      color: $n500;
+    }
+    &-disabled {
+      color: $n200;
+      pointer-events: none;
+    }
+    &.btn-ghost-active {
+      &:hover {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+  &.btn-ghost {
+    background: none;
+    color: $white;
+    border: .0625rem solid $white;
+
+    &:hover,
+    &:focus {
+      background: $white;
+      box-shadow: 0px 1rem 3.75rem rgba(0, 0, 0, 0.1);
     }
     &-inactive {
       color: $n500;

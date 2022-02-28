@@ -28,7 +28,7 @@ $(function () {
   // Enable tooltips
   $('[data-toggle="tooltip"]').tooltip();
 
-  if($('.owl-carousel').length > 0) {
+  if ($('.owl-carousel').length > 0) {
     $('.owl-carousel').owlCarousel(
       {
         items: 3,
@@ -36,11 +36,11 @@ $(function () {
         margin: 15,
         dots: true,
         nav: true,
-        navText:["<i class='far fa-angle-left'></i>","<i class='far fa-angle-right'></i>"],
+        navText: ["<i class='far fa-angle-left'></i>", "<i class='far fa-angle-right'></i>"],
         responsive: {
-          0:{
-              items: 1,
-              stagePadding: 30
+          0: {
+            items: 1,
+            stagePadding: 30
           },
           640: {
             items: 2,
@@ -57,22 +57,26 @@ $(function () {
       }
     );
   }
+  $('.datepicker').datepicker({
+    clearBtn: true,
+    format: "dd/mm/yyyy"
+  });
 
   $("#scrollTo").hide();
   $(function toTop() {
-      $(window).scroll(function () {
-          if ($(this).scrollTop() > 100) {
-              $('#scrollTo').fadeIn();
-          } else {
-              $('#scrollTo').fadeOut();
-          }
-      });
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#scrollTo').fadeIn();
+      } else {
+        $('#scrollTo').fadeOut();
+      }
+    });
 
-      $('#scrollTo').click(function () {
-          $('body,html').animate({
-              scrollTop: 0
-          }, 800);
-          return false;
-      });
+    $('#scrollTo').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
   });
 });

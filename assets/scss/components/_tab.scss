@@ -1,50 +1,29 @@
-.flight-info {
-  background: $white;
-  max-width: 55.625rem;
-  margin:0 auto;
-  box-shadow: 0rem 0rem .625rem 0rem rgba(0,0,0,0.1);
+#EventTab {
+  padding: 2rem 0 4rem 0;
+  justify-content: center;
+  border: 0 none;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
 
-  .nav {
-    border-bottom: .0625rem solid $wild-sand;
-
-    @media (min-width: $width-md) {
-      border:0 none;
+  li {
+    margin:0;
+    padding: 0 .625rem;
+    
+    @media (min-width: $width-sm) {
+      min-width: 14rem;
     }
+    a {
+      height: 3.75rem;
+      border: 0 none;
+      color: $white;
+      font-size: .875rem;
 
-    li {
-      flex-basis: 50%;
-      margin:0;
-
-      .nav-link {
-        border-radius: 0;
-        border:0 none;
-        margin:0;
-        font-size: 1.25rem;
-        line-height: 3.125rem;
-        height: 3.125rem;
-        padding:0;
-        text-align: center;
-        color: $black;
-        font-weight: $bold;
-
-        @media (min-width: $width-md) {
-          font-size: .875rem;
-          line-height: 2.75rem;
-          height: 2.75rem;
-          color: $trout;
-        }
-        &.active {
-          color: $white;
-          background: $orient;
-        }
+      @media (min-width: $width-xs) {
+        font-size: 1rem;
       }
-    }
-  }
-  .tab-content {
-    padding: 1.5rem .9375rem .9375rem;
-
-    @media (min-width: $width-md) {
-      padding:0;
+      @media (min-width: $width-sm) {
+        font-size: 1.25rem;
+      }
     }
   }
 }
