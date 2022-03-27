@@ -1,2338 +1,4262 @@
-$orange: #F58220;
-$orange-shade: #F9B479; // Carousel Arrow left & Right 
-$orange-tint: #FEF9F4; // Background #MainTiles
+$orange: #f58220;
+$orange-shade: #f9b479; // Carousel Arrow left & Right
+$orange-tint: #fef3e9; // Background #MainTiles
+$orange-contrast: #c4681a; // Contrast
 
-$green: #00CC99;
-$green-shade: #66E0C2; // Carousel Arrow left & Right 
-$green-tint: #F2FCFA; // Background #MainTiles
+$green: #00cc99;
+$green-shade: #66e0c2; // Carousel Arrow left & Right
+$green-tint: #f2fcfa; // Background #MainTiles
+$green-contrast: #00a37a; // Contrast
 
-$purple: #9370DB;
-$purple-shade: #BEA9E9; // Carousel Arrow left & Right 
-$purple-tint: #FAF8FD; // Background #MainTiles
+$purple: #9370db;
+$purple-shade: #bea9e9; // Carousel Arrow left & Right
+$purple-tint: #faf8fd; // Background #MainTiles
+$purple-contrast: #765aaf; // Contrast
 
-$blue: #1E90FF;
-$blue-shade: #78BCFF; // Carousel Arrow left & Right 
-$blue-tint: #F4F9FF; // Background #MainTiles
+$blue: #1e90ff;
+$blue-shade: #78bcff; // Carousel Arrow left & Right
+$blue-tint: #f4f9ff; // Background #MainTiles
+$blue-contrast: #1873cc; // Contrast
 
-$red: #FF0800;
-$red-shade: #FF6B66; // Carousel Arrow left & Right 
-$red-tint: #FFF3F2; // Background #MainTiles
-
+$red: #ff0800;
+$red-shade: #ff6b66; // Carousel Arrow left & Right
+$red-tint: #fff3f2; // Background #MainTiles
+$red-contrast: #cc0600; // Contrast
 
 .orange {
-  .btn {
-    &.btn-primary {
-      background-color: $orange;
-  
-      &:hover,
-      &:active {
-        background: $orange-shade;
-      }
-      &:focus,
-      &.btn-active {
-        background: $orange-shade;
-      }
-    }
-    &.btn-secondary {
-      color: $orange;
-      border-color: $orange;
+	.btn {
+		&.btn-primary {
+			background-color: $orange;
 
-      &:hover,
-      &:focus {
-        color: $orange-shade;
-        border-color: $orange-shade;
-      }
-      &.btn-ghost-active {
-        color: $orange;
-      }
-    }
-    &.btn-ghost {
-  
-      &:hover,
-      &:focus {
-        color: $orange;
-      }
-      &.btn-ghost-active {
-        color: $orange;
-      }
-    }
-    &.btn-link {
-      color: $orange;
-  
-      &:hover,
-      &.btn-link-active {
-        color: $orange-shade;
-      }
-    }
-  }
-  p {
-    a {
-      color: $orange;
-  
-      &:hover,
-      &:focus,
-      &:active {
-        color: $orange;
-      }
-    }
-  }
-  a {
-    color: $orange;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: $orange;
-    }
-  }
-  &.show-mbl-menu {
-    #NavBar {
-      border-bottom-color: $orange;
-    }
-  }
-  
-  .nav-list {
-    li {
-      &.active {
-        > a {
-          color: $orange;
-        }
-      }
-    }
-    a {
-      &:hover {
-        color: $orange;
-      }
-    }
-    > li {
-      &.dropdown {
+			&:hover,
+			&:active {
+				background: $orange-shade;
+			}
+			&:focus,
+			&.btn-active {
+				background: $orange-shade;
+			}
+		}
+		&.btn-secondary {
+			color: $orange;
+			border-color: $orange;
 
-        &.show {
-          > a {
-            color: $orange;
-          }
-        }
-        ul {
-          li {
-            &.active {
-              a {
-                color: $orange;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #HeroCarousel {
-    .carousel-indicators {
-      li {
-        background: $orange;
-      }
-    }
-    .carousel-control {
-      background: $orange-shade;
-    }
-  }
-  #MainTiles {
-    background: $orange-tint;
+			&:hover,
+			&:focus {
+				color: $orange-shade;
+				border-color: $orange-shade;
+			}
+			&.btn-ghost-active {
+				color: $orange;
+			}
+		}
+		&.btn-ghost {
+			&:hover,
+			&:focus {
+				color: $orange;
+			}
+			&.btn-ghost-active {
+				color: $orange;
+			}
+		}
+		&.btn-link {
+			color: $orange;
 
-    .section-title {
-      h2 {
-        border-left-color: $orange;
-      }
-    }
-  }
-  .performance-list,
-  .event-list {
-    li {
-      h5 {
-        color: $orange;
-      }
-      &.with-overlay {
-        .img {
-          .status {
-            strong {
-              color: $orange;
-              border-color: $orange;
-            }
-          }
-        }
-      }
-    }
-  }
-  #Subscribe,
-  #Footer,
-  .scrollTo {
-    background: $orange;
-  }
-  #Tips {
-    background: $orange-tint;
-  }
-  .badge {
-    &-primary {
-      background: $orange;
-    }
-  }
-  .tooltip {
-    &-inner {
-      background-color: $orange;
-    }
-    &.bs-tooltip-auto[x-placement^="top"],
-    &.bs-tooltip-top {
-      .arrow {
-        &:before {
-          border-top-color: $orange;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="right"],
-    &.bs-tooltip-right {
-      .arrow {
-        &:before {
-          border-right-color: $orange;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="bottom"],
-    &.bs-tooltip-bottom {
-      .arrow {
-        &:before {
-          border-bottom-color: $orange;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="left"],
-    &.bs-tooltip-left {
-      .arrow {
-        &:before {
-          border-left-color: $orange;
-        }
-      }
-    }
-  }
-  .card {
-    &-grid {
-      ul {
-        li {
-          a:not(.btn) {
-            &:hover {
-              border-color: $orange;
-  
-              h5 {
-                color: $orange;
-              }
-            }
-          }
-        }
-      }
-    }
-    &-advertisement {
-      ul {
-        li { 
-          &:hover {
-            border-color: $orange;
-          }
-        }
-      }
-    }
-    &-small {
-      li {
-  
-        &:hover {
-          a {
-            color: $orange;
-          }
-        }
-        a {
-          &:hover {
-            border-color: $orange;
-            color: $orange;
-          }
-        }
-      }
-    }
-  }
-  .carousel {
-    &-custom {
-      .owl-carousel {
-        .owl-nav {
-          button {
-            background: $orange;
-          }
-        }
-      }
-      .owl-stage-outer {
-        .owl-stage {
-          .owl-item {
-            border-color: $orange;
-  
-            &:hover {
-              border-color: $orange;
-            } 
-            .carousel-slide-item {
-              border-color: $orange;
-  
-              a {
-                color: $orange;
-              }
-            }
-          }
-        }
-      }
-      .owl-dots {
-        .owl-dot {
-          &.active {
-            background: $orange !important;
-          }
-        }
-      }
-    }
-  }
-  .accordion {
-    .card {
-      &-header {
-        background: $orange;
-      }
-    }
-  }
-  .social-media {
-    ul {
-      li {
-        a {
-          i {
-            color: $orange;
-          }
-        }
-      }
-    }
-  }
-  table {
-    width: 100%;
-  
-    &:not(.table-condensed) {
-      thead {
-        tr {
-          th {
-            background: $orange;
-          }
-        }
-      }
-    }
-  }
-  .pagination { 
-    li {
-      .page-link {
-        color: $orange;
+			&:hover,
+			&.btn-link-active {
+				color: $orange-shade;
+			}
+		}
+	}
+	p {
+		a {
+			color: $orange;
 
-        &:hover {
-          background: $orange;
-        }
-      }
-      &.active {
-        .page-link {
-          background: $orange;
-        }
-      }
-    }
-  }
-  .custom-control-input {
-    &:checked {
-      ~ .custom-control-label {
-        color: $orange;
-  
-        &:before {
-          background: $orange-shade;
-        }
-        &:after {
-          background: $orange !important;
-        }
-      }
-    }
-  }
-  .stats {
-    .stat-box {
-      p {
-        strong {
-          color: $orange;
-        }
-      }
-    }
-  }
-  .contextual-stat-box {
-    .desc {
-      p {
-        strong {
-          color: $orange;
-        }
-      }
-    }
-  }
-  #Result {
-    .section-title {
-      h2,
-      p {
-        strong {
-          color: $orange;
-        }
-      }
-    }
-  }
-  .search-result {
-    li {
-      div {
-        strong {
-          background: $orange-shade;
-        }
-      }
-    }
-  }
-  .filter {
-    background: $orange-tint;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $orange;
+			}
+		}
+	}
+	a {
+		&:not(.btn) {
+			color: $orange;
 
-    .btn-search,
-    .input-group-append {
-      color: $orange;
-    }
-  }
-  .datepicker {
-    table {
-      tr {
-        td {
-          .active {
-            background-color: $orange;
-            &:hover {
-              background-color: $orange;
-              &:hover {
-                background-color: $orange;
-              }
-              &:active {
-                background-color: $orange;
-              }
-            }
-            &:active {
-              background-color: $orange;
-            }
-            &:hover.active {
-              background-color: $orange;
-            }
-            &:hover.disabled {
-              background-color: $orange;
-            }
-            &:hover[disabled] {
-              background-color: $orange;
-            }
-            &.disabled {
-              &:active {
-                background-color: $orange;
-              }
-              &:hover.active {
-                background-color: $orange;
-              }
-              &:hover.disabled {
-                background-color: $orange;
-              }
-              &:hover[disabled] {
-                background-color: $orange;
-              }
-            }
-          }
-        }
-        td.active.active {
-          background-color: $orange;
-        }
-        td.active.disabled.active {
-          background-color: $orange;
-        }
-        td.active.disabled.disabled {
-          background-color: $orange;
-        }
-        td.active[disabled] {
-          background-color: $orange;
-        }
-        td.active.disabled[disabled] {
-          background-color: $orange;
-        }
-      }
-    }
-  }
-  #EventTab {
-    .btn {
-      background: $orange-shade;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $orange;
+			}
+		}
+	}
+	&.show-mbl-menu {
+		#NavBar {
+			border-bottom-color: $orange;
+		}
+	}
 
-      &.active {
-        background: $orange;
-      }
-    }
-  }
-  .tags {
-    > li {
-      strong {
-        background: $orange-shade;
-      }
-    }
-  }
-  .details {
-    > li {
-      &:before {
-        background: $orange;
-      }
-    }
-  }
+	.nav-list {
+		li {
+			&.active {
+				> a {
+					color: $orange;
+				}
+			}
+		}
+		a {
+			&:hover {
+				color: $orange;
+			}
+		}
+		> li {
+			&.dropdown {
+				&.show {
+					> a {
+						color: $orange;
+					}
+				}
+				ul {
+					li {
+						&.active {
+							a {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#HeroCarousel {
+		.carousel-indicators {
+			li {
+				background: $orange;
+			}
+		}
+		.carousel-control {
+			background: $orange-shade;
+		}
+	}
+	#MainTiles {
+		background: $orange-tint;
+
+		.section-title {
+			h2 {
+				border-left-color: $orange;
+			}
+		}
+	}
+	.performance-list,
+	.event-list {
+		li {
+			h5 {
+				color: $orange;
+			}
+			&.with-overlay {
+				.img {
+					.status {
+						strong {
+							color: $orange;
+							border-color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	#Subscribe,
+	#Footer,
+	.scrollTo {
+		background: $orange;
+	}
+	#Tips {
+		background: $orange-tint;
+	}
+	.badge {
+		&-primary {
+			background: $orange;
+		}
+	}
+	.tooltip {
+		&-inner {
+			background-color: $orange;
+		}
+		&.bs-tooltip-auto[x-placement^="top"],
+		&.bs-tooltip-top {
+			.arrow {
+				&:before {
+					border-top-color: $orange;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="right"],
+		&.bs-tooltip-right {
+			.arrow {
+				&:before {
+					border-right-color: $orange;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="bottom"],
+		&.bs-tooltip-bottom {
+			.arrow {
+				&:before {
+					border-bottom-color: $orange;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="left"],
+		&.bs-tooltip-left {
+			.arrow {
+				&:before {
+					border-left-color: $orange;
+				}
+			}
+		}
+	}
+	.card {
+		&-grid {
+			ul {
+				li {
+					a:not(.btn) {
+						&:hover {
+							border-color: $orange;
+
+							h5 {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-advertisement {
+			ul {
+				li {
+					&:hover {
+						border-color: $orange;
+					}
+				}
+			}
+		}
+		&-small {
+			li {
+				&:hover {
+					a {
+						color: $orange;
+					}
+				}
+				a {
+					&:hover {
+						border-color: $orange;
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+	.carousel {
+		&-custom {
+			.owl-carousel {
+				.owl-nav {
+					button {
+						background: $orange;
+					}
+				}
+			}
+			.owl-stage-outer {
+				.owl-stage {
+					.owl-item {
+						border-color: $orange;
+
+						&:hover {
+							border-color: $orange;
+						}
+						.carousel-slide-item {
+							border-color: $orange;
+
+							a {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+			.owl-dots {
+				.owl-dot {
+					&.active {
+						background: $orange !important;
+					}
+				}
+			}
+		}
+	}
+	.accordion {
+		.card {
+			&-header {
+				background: $orange;
+			}
+		}
+	}
+	.social-media {
+		ul {
+			li {
+				a {
+					i {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+	table {
+		&:not(.table-condensed) {
+			thead {
+				tr {
+					th {
+						background: $orange;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		li {
+			.page-link {
+				color: $orange;
+
+				&:hover {
+					background: $orange;
+				}
+			}
+			&.active {
+				.page-link {
+					background: $orange;
+				}
+			}
+		}
+	}
+	.custom-control-input {
+		&:checked {
+			~ .custom-control-label {
+				color: $orange;
+
+				&:before {
+					background: $orange-shade;
+				}
+				&:after {
+					background: $orange !important;
+				}
+			}
+		}
+	}
+	.stats {
+		.stat-box {
+			p {
+				strong {
+					color: $orange;
+				}
+			}
+		}
+	}
+	.contextual-stat-box {
+		.desc {
+			p {
+				strong {
+					color: $orange;
+				}
+			}
+		}
+	}
+	#Result {
+		.section-title {
+			h2,
+			p {
+				strong {
+					color: $orange;
+				}
+			}
+		}
+	}
+	.search-result {
+		li {
+			div {
+				strong {
+					background: $orange-shade;
+				}
+			}
+		}
+	}
+	.filter {
+		background: $orange-tint;
+
+		.btn-search,
+		.input-group-append {
+			color: $orange;
+		}
+	}
+	.datepicker {
+		em {
+			color: $orange;
+		}
+	}
+	#EventTab {
+		.btn {
+			background: $orange-shade;
+
+			&.active {
+				background: $orange;
+			}
+		}
+	}
+	.tags {
+		> li {
+			strong {
+				background: $orange-shade;
+			}
+		}
+	}
+	.details {
+		> li {
+			&:before {
+				background: $orange;
+			}
+		}
+	}
+	#Calendar {
+		.control {
+			a {
+				background: $orange;
+			}
+		}
+	}
+	.calendar-list {
+		li {
+			.box {
+				background: $orange;
+
+				&.cancelled {
+					background: $orange-tint;
+
+					.badge {
+						background: $orange-shade;
+					}
+				}
+			}
+		}
+	}
+	.daterangepicker {
+		.ranges {
+			li {
+				&.active {
+					color: $orange;
+				}
+				&:hover {
+					color: $orange-shade;
+				}
+			}
+		}
+		td {
+			&:not(.off) {
+				&.active {
+					background: $orange;
+
+					&:hover {
+						background: $orange-shade;
+					}
+				}
+				&.in-range {
+					background: $orange-tint;
+
+					&.active {
+						background: $orange;
+
+						&:hover {
+							background: $orange-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contrast {
+		.btn {
+			&.btn-primary {
+				background-color: $orange-contrast;
+			}
+			&.btn-secondary {
+				color: $orange-contrast;
+				border-color: $orange-contrast;
+
+				&.btn-ghost-active {
+					color: $orange-contrast;
+				}
+			}
+			&.btn-ghost {
+				&:hover,
+				&:focus {
+					color: $orange-contrast;
+				}
+				&.btn-ghost-active {
+					color: $orange-contrast;
+				}
+			}
+			&.btn-link {
+				color: $orange-contrast;
+			}
+		}
+		p {
+			a {
+				color: $orange-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $orange-contrast;
+				}
+			}
+		}
+		a {
+			&:not(.btn) {
+				color: $orange-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $orange-contrast;
+				}
+			}
+		}
+		&.show-mbl-menu {
+			#NavBar {
+				border-bottom-color: $orange-contrast;
+			}
+		}
+
+		.nav-list {
+			li {
+				&.active {
+					> a {
+						color: $orange-contrast;
+					}
+				}
+			}
+			a {
+				&:hover {
+					color: $orange-contrast;
+				}
+			}
+			> li {
+				&.dropdown {
+					&.show {
+						> a {
+							color: $orange-contrast;
+						}
+					}
+					ul {
+						li {
+							&.active {
+								a {
+									color: $orange-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#HeroCarousel {
+			.carousel-indicators {
+				li {
+					background: $orange-contrast;
+				}
+			}
+		}
+		#MainTiles {
+			.section-title {
+				h2 {
+					border-left-color: $orange-contrast;
+				}
+			}
+		}
+		.performance-list,
+		.event-list {
+			li {
+				h5 {
+					color: $orange-contrast;
+				}
+				&.with-overlay {
+					.img {
+						.status {
+							strong {
+								color: $orange-contrast;
+								border-color: $orange-contrast;
+							}
+						}
+					}
+				}
+			}
+		}
+		#Subscribe,
+		#Footer,
+		.scrollTo {
+			background: $orange-contrast;
+		}
+		.badge {
+			&-primary {
+				background: $orange-contrast;
+			}
+		}
+		.tooltip {
+			&-inner {
+				background-color: $orange-contrast;
+			}
+			&.bs-tooltip-auto[x-placement^="top"],
+			&.bs-tooltip-top {
+				.arrow {
+					&:before {
+						border-top-color: $orange-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="right"],
+			&.bs-tooltip-right {
+				.arrow {
+					&:before {
+						border-right-color: $orange-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="bottom"],
+			&.bs-tooltip-bottom {
+				.arrow {
+					&:before {
+						border-bottom-color: $orange-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="left"],
+			&.bs-tooltip-left {
+				.arrow {
+					&:before {
+						border-left-color: $orange-contrast;
+					}
+				}
+			}
+		}
+		.card {
+			&-grid {
+				ul {
+					li {
+						a:not(.btn) {
+							&:hover {
+								border-color: $orange-contrast;
+
+								h5 {
+									color: $orange-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-advertisement {
+				ul {
+					li {
+						&:hover {
+							border-color: $orange-contrast;
+						}
+					}
+				}
+			}
+			&-small {
+				li {
+					&:hover {
+						a {
+							color: $orange-contrast;
+						}
+					}
+					a {
+						&:hover {
+							border-color: $orange-contrast;
+							color: $orange-contrast;
+						}
+					}
+				}
+			}
+		}
+		.carousel {
+			&-custom {
+				.owl-carousel {
+					.owl-nav {
+						button {
+							background: $orange-contrast;
+						}
+					}
+				}
+				.owl-stage-outer {
+					.owl-stage {
+						.owl-item {
+							border-color: $orange-contrast;
+
+							&:hover {
+								border-color: $orange-contrast;
+							}
+							.carousel-slide-item {
+								border-color: $orange-contrast;
+
+								a {
+									color: $orange-contrast;
+								}
+							}
+						}
+					}
+				}
+				.owl-dots {
+					.owl-dot {
+						&.active {
+							background: $orange-contrast !important;
+						}
+					}
+				}
+			}
+		}
+		.accordion {
+			.card {
+				&-header {
+					background: $orange-contrast;
+				}
+			}
+		}
+		.social-media {
+			ul {
+				li {
+					a {
+						i {
+							color: $orange-contrast;
+						}
+					}
+				}
+			}
+		}
+		table {
+			&:not(.table-condensed) {
+				thead {
+					tr {
+						th {
+							background: $orange-contrast;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			li {
+				.page-link {
+					color: $orange-contrast;
+
+					&:hover {
+						background: $orange-contrast;
+					}
+				}
+				&.active {
+					.page-link {
+						background: $orange-contrast;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:checked {
+				~ .custom-control-label {
+					color: $orange-contrast;
+
+					&:after {
+						background: $orange-contrast !important;
+					}
+				}
+			}
+		}
+		.stats {
+			.stat-box {
+				p {
+					strong {
+						color: $orange-contrast;
+					}
+				}
+			}
+		}
+		.contextual-stat-box {
+			.desc {
+				p {
+					strong {
+						color: $orange-contrast;
+					}
+				}
+			}
+		}
+		#Result {
+			.section-title {
+				h2,
+				p {
+					strong {
+						color: $orange-contrast;
+					}
+				}
+			}
+		}
+		.filter {
+			.btn-search,
+			.input-group-append {
+				color: $orange-contrast;
+			}
+		}
+		.datepicker {
+			em {
+				color: $orange-contrast;
+			}
+		}
+		#EventTab {
+			.btn {
+				&.active {
+					background: $orange-contrast;
+				}
+			}
+		}
+		.details {
+			> li {
+				&:before {
+					background: $orange-contrast;
+				}
+			}
+		}
+		#Calendar {
+			.control {
+				a {
+					background: $orange-contrast;
+				}
+			}
+		}
+		.calendar-list {
+			li {
+				.box {
+					background: $orange-contrast;
+				}
+			}
+		}
+		.daterangepicker {
+			.ranges {
+				li {
+					&.active {
+						color: $orange-contrast;
+					}
+				}
+			}
+			td {
+				&:not(.off) {
+					&.active {
+						background: $orange-contrast;
+					}
+					&.in-range {
+						&.active {
+							background: $orange-contrast;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Green Theme
 
 .green {
-  .btn {
-    &.btn-primary {
-      background-color: $green;
-  
-      &:hover,
-      &:active {
-        background: $green-shade;
-      }
-      &:focus,
-      &.btn-active {
-        background: $green-shade;
-      }
-    }
-    &.btn-secondary {
-      color: $green;
-      border-color: $green;
+	.btn {
+		&.btn-primary {
+			background-color: $green;
 
-      &:hover,
-      &:focus {
-        color: $green-shade;
-        border-color: $green-shade;
-      }
-      &.btn-ghost-active {
-        color: $green;
-      }
-    }
-    &.btn-ghost {
-  
-      &:hover,
-      &:focus {
-        color: $green;
-      }
-      &.btn-ghost-active {
-        color: $green;
-      }
-    }
-    &.btn-link {
-      color: $green;
-  
-      &:hover,
-      &.btn-link-active {
-        color: $green-shade;
-      }
-    }
-  }
-  p {
-    a {
-      color: $green;
-  
-      &:hover,
-      &:focus,
-      &:active {
-        color: $green;
-      }
-    }
-  }
-  a {
-    color: $green;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: $green;
-    }
-  }
-  &.show-mbl-menu {
-    #NavBar {
-      border-bottom-color: $green;
-    }
-  }
-  
-  .nav-list {
-    li {
-      &.active {
-        > a {
-          color: $green;
-        }
-      }
-    }
-    a {
-      &:hover {
-        color: $green;
-      }
-    }
-    > li {
-      &.dropdown {
+			&:hover,
+			&:active {
+				background: $green-shade;
+			}
+			&:focus,
+			&.btn-active {
+				background: $green-shade;
+			}
+		}
+		&.btn-secondary {
+			color: $green;
+			border-color: $green;
 
-        &.show {
-          > a {
-            color: $green;
-          }
-        }
-        ul {
-          li {
-            &.active {
-              a {
-                color: $green;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #HeroCarousel {
-    .carousel-indicators {
-      li {
-        background: $green;
-      }
-    }
-    .carousel-control {
-      background: $green-shade;
-    }
-  }
-  #MainTiles {
-    background: $green-tint;
+			&:hover,
+			&:focus {
+				color: $green-shade;
+				border-color: $green-shade;
+			}
+			&.btn-ghost-active {
+				color: $green;
+			}
+		}
+		&.btn-ghost {
+			&:hover,
+			&:focus {
+				color: $green;
+			}
+			&.btn-ghost-active {
+				color: $green;
+			}
+		}
+		&.btn-link {
+			color: $green;
 
-    .section-title {
-      h2 {
-        border-left-color: $green;
-      }
-    }
-  }
-  .performance-list,
-  .event-list {
-    li {
-      h5 {
-        color: $green;
-      }
-      &.with-overlay {
-        .img {
-          .status {
-            strong {
-              color: $green;
-              border-color: $green;
-            }
-          }
-        }
-      }
-    }
-  }
-  #Subscribe,
-  #Footer,
-  .scrollTo {
-    background: $green;
-  }
-  #Tips {
-    background: $green-tint;
-  }
-  .badge {
-    &-primary {
-      background: $green;
-    }
-  }
-  .tooltip {
-    &-inner {
-      background-color: $green;
-    }
-    &.bs-tooltip-auto[x-placement^="top"],
-    &.bs-tooltip-top {
-      .arrow {
-        &:before {
-          border-top-color: $green;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="right"],
-    &.bs-tooltip-right {
-      .arrow {
-        &:before {
-          border-right-color: $green;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="bottom"],
-    &.bs-tooltip-bottom {
-      .arrow {
-        &:before {
-          border-bottom-color: $green;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="left"],
-    &.bs-tooltip-left {
-      .arrow {
-        &:before {
-          border-left-color: $green;
-        }
-      }
-    }
-  }
-  .card {
-    &-grid {
-      ul {
-        li {
-          a:not(.btn) {
-            &:hover {
-              border-color: $green;
-  
-              h5 {
-                color: $green;
-              }
-            }
-          }
-        }
-      }
-    }
-    &-advertisement {
-      ul {
-        li { 
-          &:hover {
-            border-color: $green;
-          }
-        }
-      }
-    }
-    &-small {
-      li {
-  
-        &:hover {
-          a {
-            color: $green;
-          }
-        }
-        a {
-          &:hover {
-            border-color: $green;
-            color: $green;
-          }
-        }
-      }
-    }
-  }
-  .carousel {
-    &-custom {
-      .owl-carousel {
-        .owl-nav {
-          button {
-            background: $green;
-          }
-        }
-      }
-      .owl-stage-outer {
-        .owl-stage {
-          .owl-item {
-            border-color: $green;
-  
-            &:hover {
-              border-color: $green;
-            } 
-            .carousel-slide-item {
-              border-color: $green;
-  
-              a {
-                color: $green;
-              }
-            }
-          }
-        }
-      }
-      .owl-dots {
-        .owl-dot {
-          &.active {
-            background: $green !important;
-          }
-        }
-      }
-    }
-  }
-  .accordion {
-    .card {
-      &-header {
-        background: $green;
-      }
-    }
-  }
-  .social-media {
-    ul {
-      li {
-        a {
-          i {
-            color: $green;
-          }
-        }
-      }
-    }
-  }
-  table {
-    width: 100%;
-  
-    &:not(.table-condensed) {
-      thead {
-        tr {
-          th {
-            background: $green;
-          }
-        }
-      }
-    }
-  }
-  .pagination { 
-    li {
-      .page-link {
-        color: $green;
+			&:hover,
+			&.btn-link-active {
+				color: $green-shade;
+			}
+		}
+	}
+	p {
+		a {
+			color: $green;
 
-        &:hover {
-          background: $green;
-        }
-      }
-      &.active {
-        .page-link {
-          background: $green;
-        }
-      }
-    }
-  }
-  .custom-control-input {
-    &:checked {
-      ~ .custom-control-label {
-        color: $green;
-  
-        &:before {
-          background: $green-shade;
-        }
-        &:after {
-          background: $green !important;
-        }
-      }
-    }
-  }
-  .stats {
-    .stat-box {
-      p {
-        strong {
-          color: $green;
-        }
-      }
-    }
-  }
-  .contextual-stat-box {
-    .desc {
-      p {
-        strong {
-          color: $green;
-        }
-      }
-    }
-  }
-  #Result {
-    .section-title {
-      h2,
-      p {
-        strong {
-          color: $green;
-        }
-      }
-    }
-  }
-  .search-result {
-    li {
-      div {
-        strong {
-          background: $green-shade;
-        }
-      }
-    }
-  }
-  .filter {
-    background: $green-tint;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $green;
+			}
+		}
+	}
+	a {
+		&:not(.btn) {
+			color: $green;
 
-    .btn-search,
-    .input-group-append {
-      color: $green;
-    }
-  }
-  .datepicker {
-    table {
-      tr {
-        td {
-          .active {
-            background-color: $green;
-            &:hover {
-              background-color: $green;
-              &:hover {
-                background-color: $green;
-              }
-              &:active {
-                background-color: $green;
-              }
-            }
-            &:active {
-              background-color: $green;
-            }
-            &:hover.active {
-              background-color: $green;
-            }
-            &:hover.disabled {
-              background-color: $green;
-            }
-            &:hover[disabled] {
-              background-color: $green;
-            }
-            &.disabled {
-              &:active {
-                background-color: $green;
-              }
-              &:hover.active {
-                background-color: $green;
-              }
-              &:hover.disabled {
-                background-color: $green;
-              }
-              &:hover[disabled] {
-                background-color: $green;
-              }
-            }
-          }
-        }
-        td.active.active {
-          background-color: $green;
-        }
-        td.active.disabled.active {
-          background-color: $green;
-        }
-        td.active.disabled.disabled {
-          background-color: $green;
-        }
-        td.active[disabled] {
-          background-color: $green;
-        }
-        td.active.disabled[disabled] {
-          background-color: $green;
-        }
-      }
-    }
-  }
-  #EventTab {
-    .btn {
-      background: $green-shade;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $green;
+			}
+		}
+	}
+	&.show-mbl-menu {
+		#NavBar {
+			border-bottom-color: $green;
+		}
+	}
 
-      &.active {
-        background: $green;
-      }
-    }
-  }
-  .tags {
-    > li {
-      strong {
-        background: $green-shade;
-      }
-    }
-  }
-  .details {
-    > li {
-      &:before {
-        background: $green;
-      }
-    }
-  }
+	.nav-list {
+		li {
+			&.active {
+				> a {
+					color: $green;
+				}
+			}
+		}
+		a {
+			&:hover {
+				color: $green;
+			}
+		}
+		> li {
+			&.dropdown {
+				&.show {
+					> a {
+						color: $green;
+					}
+				}
+				ul {
+					li {
+						&.active {
+							a {
+								color: $green;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#HeroCarousel {
+		.carousel-indicators {
+			li {
+				background: $green;
+			}
+		}
+		.carousel-control {
+			background: $green-shade;
+		}
+	}
+	#MainTiles {
+		background: $green-tint;
+
+		.section-title {
+			h2 {
+				border-left-color: $green;
+			}
+		}
+	}
+	.performance-list,
+	.event-list {
+		li {
+			h5 {
+				color: $green;
+			}
+			&.with-overlay {
+				.img {
+					.status {
+						strong {
+							color: $green;
+							border-color: $green;
+						}
+					}
+				}
+			}
+		}
+	}
+	#Subscribe,
+	#Footer,
+	.scrollTo {
+		background: $green;
+	}
+	#Tips {
+		background: $green-tint;
+	}
+	.badge {
+		&-primary {
+			background: $green;
+		}
+	}
+	.tooltip {
+		&-inner {
+			background-color: $green;
+		}
+		&.bs-tooltip-auto[x-placement^="top"],
+		&.bs-tooltip-top {
+			.arrow {
+				&:before {
+					border-top-color: $green;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="right"],
+		&.bs-tooltip-right {
+			.arrow {
+				&:before {
+					border-right-color: $green;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="bottom"],
+		&.bs-tooltip-bottom {
+			.arrow {
+				&:before {
+					border-bottom-color: $green;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="left"],
+		&.bs-tooltip-left {
+			.arrow {
+				&:before {
+					border-left-color: $green;
+				}
+			}
+		}
+	}
+	.card {
+		&-grid {
+			ul {
+				li {
+					a:not(.btn) {
+						&:hover {
+							border-color: $green;
+
+							h5 {
+								color: $green;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-advertisement {
+			ul {
+				li {
+					&:hover {
+						border-color: $green;
+					}
+				}
+			}
+		}
+		&-small {
+			li {
+				&:hover {
+					a {
+						color: $green;
+					}
+				}
+				a {
+					&:hover {
+						border-color: $green;
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+	.carousel {
+		&-custom {
+			.owl-carousel {
+				.owl-nav {
+					button {
+						background: $green;
+					}
+				}
+			}
+			.owl-stage-outer {
+				.owl-stage {
+					.owl-item {
+						border-color: $green;
+
+						&:hover {
+							border-color: $green;
+						}
+						.carousel-slide-item {
+							border-color: $green;
+
+							a {
+								color: $green;
+							}
+						}
+					}
+				}
+			}
+			.owl-dots {
+				.owl-dot {
+					&.active {
+						background: $green !important;
+					}
+				}
+			}
+		}
+	}
+	.accordion {
+		.card {
+			&-header {
+				background: $green;
+			}
+		}
+	}
+	.social-media {
+		ul {
+			li {
+				a {
+					i {
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+	table {
+		&:not(.table-condensed) {
+			thead {
+				tr {
+					th {
+						background: $green;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		li {
+			.page-link {
+				color: $green;
+
+				&:hover {
+					background: $green;
+				}
+			}
+			&.active {
+				.page-link {
+					background: $green;
+				}
+			}
+		}
+	}
+	.custom-control-input {
+		&:checked {
+			~ .custom-control-label {
+				color: $green;
+
+				&:before {
+					background: $green-shade;
+				}
+				&:after {
+					background: $green !important;
+				}
+			}
+		}
+	}
+	.stats {
+		.stat-box {
+			p {
+				strong {
+					color: $green;
+				}
+			}
+		}
+	}
+	.contextual-stat-box {
+		.desc {
+			p {
+				strong {
+					color: $green;
+				}
+			}
+		}
+	}
+	#Result {
+		.section-title {
+			h2,
+			p {
+				strong {
+					color: $green;
+				}
+			}
+		}
+	}
+	.search-result {
+		li {
+			div {
+				strong {
+					background: $green-shade;
+				}
+			}
+		}
+	}
+	.filter {
+		background: $green-tint;
+
+		.btn-search,
+		.input-group-append {
+			color: $green;
+		}
+	}
+	.datepicker {
+		em {
+			color: $green;
+		}
+	}
+	#EventTab {
+		.btn {
+			background: $green-shade;
+
+			&.active {
+				background: $green;
+			}
+		}
+	}
+	.tags {
+		> li {
+			strong {
+				background: $green-shade;
+			}
+		}
+	}
+	.details {
+		> li {
+			&:before {
+				background: $green;
+			}
+		}
+	}
+	#Calendar {
+		.control {
+			a {
+				background: $green;
+			}
+		}
+	}
+	.calendar-list {
+		li {
+			.box {
+				background: $green;
+
+				&.cancelled {
+					background: $green-tint;
+
+					.badge {
+						background: $green-shade;
+					}
+				}
+			}
+		}
+	}
+	.daterangepicker {
+		.ranges {
+			li {
+				&.active {
+					color: $green;
+				}
+				&:hover {
+					color: $green-shade;
+				}
+			}
+		}
+		td {
+			&:not(.off) {
+				&.active {
+					background: $green;
+
+					&:hover {
+						background: $green-shade;
+					}
+				}
+				&.in-range {
+					background: $green-tint;
+
+					&.active {
+						background: $green;
+
+						&:hover {
+							background: $green-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contrast {
+		.btn {
+			&.btn-primary {
+				background-color: $green-contrast;
+			}
+			&.btn-secondary {
+				color: $green-contrast;
+				border-color: $green-contrast;
+
+				&.btn-ghost-active {
+					color: $green-contrast;
+				}
+			}
+			&.btn-ghost {
+				&:hover,
+				&:focus {
+					color: $green-contrast;
+				}
+				&.btn-ghost-active {
+					color: $green-contrast;
+				}
+			}
+			&.btn-link {
+				color: $green-contrast;
+			}
+		}
+		p {
+			a {
+				color: $green-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $green-contrast;
+				}
+			}
+		}
+		a {
+			&:not(.btn) {
+				color: $green-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $green-contrast;
+				}
+			}
+		}
+		&.show-mbl-menu {
+			#NavBar {
+				border-bottom-color: $green-contrast;
+			}
+		}
+
+		.nav-list {
+			li {
+				&.active {
+					> a {
+						color: $green-contrast;
+					}
+				}
+			}
+			a {
+				&:hover {
+					color: $green-contrast;
+				}
+			}
+			> li {
+				&.dropdown {
+					&.show {
+						> a {
+							color: $green-contrast;
+						}
+					}
+					ul {
+						li {
+							&.active {
+								a {
+									color: $green-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#HeroCarousel {
+			.carousel-indicators {
+				li {
+					background: $green-contrast;
+				}
+			}
+		}
+		#MainTiles {
+			.section-title {
+				h2 {
+					border-left-color: $green-contrast;
+				}
+			}
+		}
+		.performance-list,
+		.event-list {
+			li {
+				h5 {
+					color: $green-contrast;
+				}
+				&.with-overlay {
+					.img {
+						.status {
+							strong {
+								color: $green-contrast;
+								border-color: $green-contrast;
+							}
+						}
+					}
+				}
+			}
+		}
+		#Subscribe,
+		#Footer,
+		.scrollTo {
+			background: $green-contrast;
+		}
+		.badge {
+			&-primary {
+				background: $green-contrast;
+			}
+		}
+		.tooltip {
+			&-inner {
+				background-color: $green-contrast;
+			}
+			&.bs-tooltip-auto[x-placement^="top"],
+			&.bs-tooltip-top {
+				.arrow {
+					&:before {
+						border-top-color: $green-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="right"],
+			&.bs-tooltip-right {
+				.arrow {
+					&:before {
+						border-right-color: $green-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="bottom"],
+			&.bs-tooltip-bottom {
+				.arrow {
+					&:before {
+						border-bottom-color: $green-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="left"],
+			&.bs-tooltip-left {
+				.arrow {
+					&:before {
+						border-left-color: $green-contrast;
+					}
+				}
+			}
+		}
+		.card {
+			&-grid {
+				ul {
+					li {
+						a:not(.btn) {
+							&:hover {
+								border-color: $green-contrast;
+
+								h5 {
+									color: $green-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-advertisement {
+				ul {
+					li {
+						&:hover {
+							border-color: $green-contrast;
+						}
+					}
+				}
+			}
+			&-small {
+				li {
+					&:hover {
+						a {
+							color: $green-contrast;
+						}
+					}
+					a {
+						&:hover {
+							border-color: $green-contrast;
+							color: $green-contrast;
+						}
+					}
+				}
+			}
+		}
+		.carousel {
+			&-custom {
+				.owl-carousel {
+					.owl-nav {
+						button {
+							background: $green-contrast;
+						}
+					}
+				}
+				.owl-stage-outer {
+					.owl-stage {
+						.owl-item {
+							border-color: $green-contrast;
+
+							&:hover {
+								border-color: $green-contrast;
+							}
+							.carousel-slide-item {
+								border-color: $green-contrast;
+
+								a {
+									color: $green-contrast;
+								}
+							}
+						}
+					}
+				}
+				.owl-dots {
+					.owl-dot {
+						&.active {
+							background: $green-contrast !important;
+						}
+					}
+				}
+			}
+		}
+		.accordion {
+			.card {
+				&-header {
+					background: $green-contrast;
+				}
+			}
+		}
+		.social-media {
+			ul {
+				li {
+					a {
+						i {
+							color: $green-contrast;
+						}
+					}
+				}
+			}
+		}
+		table {
+			&:not(.table-condensed) {
+				thead {
+					tr {
+						th {
+							background: $green-contrast;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			li {
+				.page-link {
+					color: $green-contrast;
+
+					&:hover {
+						background: $green-contrast;
+					}
+				}
+				&.active {
+					.page-link {
+						background: $green-contrast;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:checked {
+				~ .custom-control-label {
+					color: $green-contrast;
+
+					&:after {
+						background: $green-contrast !important;
+					}
+				}
+			}
+		}
+		.stats {
+			.stat-box {
+				p {
+					strong {
+						color: $green-contrast;
+					}
+				}
+			}
+		}
+		.contextual-stat-box {
+			.desc {
+				p {
+					strong {
+						color: $green-contrast;
+					}
+				}
+			}
+		}
+		#Result {
+			.section-title {
+				h2,
+				p {
+					strong {
+						color: $green-contrast;
+					}
+				}
+			}
+		}
+		.filter {
+			.btn-search,
+			.input-group-append {
+				color: $green-contrast;
+			}
+		}
+		.datepicker {
+			em {
+				color: $green-contrast;
+			}
+		}
+		#EventTab {
+			.btn {
+				&.active {
+					background: $green-contrast;
+				}
+			}
+		}
+		.details {
+			> li {
+				&:before {
+					background: $green-contrast;
+				}
+			}
+		}
+		#Calendar {
+			.control {
+				a {
+					background: $green-contrast;
+				}
+			}
+		}
+		.calendar-list {
+			li {
+				.box {
+					background: $green-contrast;
+				}
+			}
+		}
+		.daterangepicker {
+			.ranges {
+				li {
+					&.active {
+						color: $green-contrast;
+					}
+				}
+			}
+			td {
+				&:not(.off) {
+					&.active {
+						background: $green-contrast;
+					}
+					&.in-range {
+						&.active {
+							background: $green-contrast;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Purple Theme
 
 .purple {
-  .btn {
-    &.btn-primary {
-      background-color: $purple;
-  
-      &:hover,
-      &:active {
-        background: $purple-shade;
-      }
-      &:focus,
-      &.btn-active {
-        background: $purple-shade;
-      }
-    }
-    &.btn-secondary {
-      color: $purple;
-      border-color: $purple;
+	.btn {
+		&.btn-primary {
+			background-color: $purple;
 
-      &:hover,
-      &:focus {
-        color: $purple-shade;
-        border-color: $purple-shade;
-      }
-      &.btn-ghost-active {
-        color: $purple;
-      }
-    }
-    &.btn-ghost {
-  
-      &:hover,
-      &:focus {
-        color: $purple;
-      }
-      &.btn-ghost-active {
-        color: $purple;
-      }
-    }
-    &.btn-link {
-      color: $purple;
-  
-      &:hover,
-      &.btn-link-active {
-        color: $purple-shade;
-      }
-    }
-  }
-  p {
-    a {
-      color: $purple;
-  
-      &:hover,
-      &:focus,
-      &:active {
-        color: $purple;
-      }
-    }
-  }
-  a {
-    color: $purple;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: $purple;
-    }
-  }
-  &.show-mbl-menu {
-    #NavBar {
-      border-bottom-color: $purple;
-    }
-  }
-  
-  .nav-list {
-    li {
-      &.active {
-        > a {
-          color: $purple;
-        }
-      }
-    }
-    a {
-      &:hover {
-        color: $purple;
-      }
-    }
-    > li {
-      &.dropdown {
+			&:hover,
+			&:active {
+				background: $purple-shade;
+			}
+			&:focus,
+			&.btn-active {
+				background: $purple-shade;
+			}
+		}
+		&.btn-secondary {
+			color: $purple;
+			border-color: $purple;
 
-        &.show {
-          > a {
-            color: $purple;
-          }
-        }
-        ul {
-          li {
-            &.active {
-              a {
-                color: $purple;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #HeroCarousel {
-    .carousel-indicators {
-      li {
-        background: $purple;
-      }
-    }
-    .carousel-control {
-      background: $purple-shade;
-    }
-  }
-  #MainTiles {
-    background: $purple-tint;
+			&:hover,
+			&:focus {
+				color: $purple-shade;
+				border-color: $purple-shade;
+			}
+			&.btn-ghost-active {
+				color: $purple;
+			}
+		}
+		&.btn-ghost {
+			&:hover,
+			&:focus {
+				color: $purple;
+			}
+			&.btn-ghost-active {
+				color: $purple;
+			}
+		}
+		&.btn-link {
+			color: $purple;
 
-    .section-title {
-      h2 {
-        border-left-color: $purple;
-      }
-    }
-  }
-  .performance-list,
-  .event-list {
-    li {
-      h5 {
-        color: $purple;
-      }
-      &.with-overlay {
-        .img {
-          .status {
-            strong {
-              color: $purple;
-              border-color: $purple;
-            }
-          }
-        }
-      }
-    }
-  }
-  #Subscribe,
-  #Footer,
-  .scrollTo {
-    background: $purple;
-  }
-  #Tips {
-    background: $purple-tint;
-  }
-  .badge {
-    &-primary {
-      background: $purple;
-    }
-  }
-  .tooltip {
-    &-inner {
-      background-color: $purple;
-    }
-    &.bs-tooltip-auto[x-placement^="top"],
-    &.bs-tooltip-top {
-      .arrow {
-        &:before {
-          border-top-color: $purple;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="right"],
-    &.bs-tooltip-right {
-      .arrow {
-        &:before {
-          border-right-color: $purple;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="bottom"],
-    &.bs-tooltip-bottom {
-      .arrow {
-        &:before {
-          border-bottom-color: $purple;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="left"],
-    &.bs-tooltip-left {
-      .arrow {
-        &:before {
-          border-left-color: $purple;
-        }
-      }
-    }
-  }
-  .card {
-    &-grid {
-      ul {
-        li {
-          a:not(.btn) {
-            &:hover {
-              border-color: $purple;
-  
-              h5 {
-                color: $purple;
-              }
-            }
-          }
-        }
-      }
-    }
-    &-advertisement {
-      ul {
-        li { 
-          &:hover {
-            border-color: $purple;
-          }
-        }
-      }
-    }
-    &-small {
-      li {
-  
-        &:hover {
-          a {
-            color: $purple;
-          }
-        }
-        a {
-          &:hover {
-            border-color: $purple;
-            color: $purple;
-          }
-        }
-      }
-    }
-  }
-  .carousel {
-    &-custom {
-      .owl-carousel {
-        .owl-nav {
-          button {
-            background: $purple;
-          }
-        }
-      }
-      .owl-stage-outer {
-        .owl-stage {
-          .owl-item {
-            border-color: $purple;
-  
-            &:hover {
-              border-color: $purple;
-            } 
-            .carousel-slide-item {
-              border-color: $purple;
-  
-              a {
-                color: $purple;
-              }
-            }
-          }
-        }
-      }
-      .owl-dots {
-        .owl-dot {
-          &.active {
-            background: $purple !important;
-          }
-        }
-      }
-    }
-  }
-  .accordion {
-    .card {
-      &-header {
-        background: $purple;
-      }
-    }
-  }
-  .social-media {
-    ul {
-      li {
-        a {
-          i {
-            color: $purple;
-          }
-        }
-      }
-    }
-  }
-  table {
-    width: 100%;
-  
-    &:not(.table-condensed) {
-      thead {
-        tr {
-          th {
-            background: $purple;
-          }
-        }
-      }
-    }
-  }
-  .pagination { 
-    li {
-      .page-link {
-        color: $purple;
+			&:hover,
+			&.btn-link-active {
+				color: $purple-shade;
+			}
+		}
+	}
+	p {
+		a {
+			color: $purple;
 
-        &:hover {
-          background: $purple;
-        }
-      }
-      &.active {
-        .page-link {
-          background: $purple;
-        }
-      }
-    }
-  }
-  .custom-control-input {
-    &:checked {
-      ~ .custom-control-label {
-        color: $purple;
-  
-        &:before {
-          background: $purple-shade;
-        }
-        &:after {
-          background: $purple !important;
-        }
-      }
-    }
-  }
-  .stats {
-    .stat-box {
-      p {
-        strong {
-          color: $purple;
-        }
-      }
-    }
-  }
-  .contextual-stat-box {
-    .desc {
-      p {
-        strong {
-          color: $purple;
-        }
-      }
-    }
-  }
-  #Result {
-    .section-title {
-      h2,
-      p {
-        strong {
-          color: $purple;
-        }
-      }
-    }
-  }
-  .search-result {
-    li {
-      div {
-        strong {
-          background: $purple-shade;
-        }
-      }
-    }
-  }
-  .filter {
-    background: $purple-tint;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $purple;
+			}
+		}
+	}
+	a {
+		&:not(.btn) {
+			color: $purple;
 
-    .btn-search,
-    .input-group-append {
-      color: $purple;
-    }
-  }
-  .datepicker {
-    table {
-      tr {
-        td {
-          .active {
-            background-color: $purple;
-            &:hover {
-              background-color: $purple;
-              &:hover {
-                background-color: $purple;
-              }
-              &:active {
-                background-color: $purple;
-              }
-            }
-            &:active {
-              background-color: $purple;
-            }
-            &:hover.active {
-              background-color: $purple;
-            }
-            &:hover.disabled {
-              background-color: $purple;
-            }
-            &:hover[disabled] {
-              background-color: $purple;
-            }
-            &.disabled {
-              &:active {
-                background-color: $purple;
-              }
-              &:hover.active {
-                background-color: $purple;
-              }
-              &:hover.disabled {
-                background-color: $purple;
-              }
-              &:hover[disabled] {
-                background-color: $purple;
-              }
-            }
-          }
-        }
-        td.active.active {
-          background-color: $purple;
-        }
-        td.active.disabled.active {
-          background-color: $purple;
-        }
-        td.active.disabled.disabled {
-          background-color: $purple;
-        }
-        td.active[disabled] {
-          background-color: $purple;
-        }
-        td.active.disabled[disabled] {
-          background-color: $purple;
-        }
-      }
-    }
-  }
-  #EventTab {
-    .btn {
-      background: $purple-shade;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $purple;
+			}
+		}
+	}
+	&.show-mbl-menu {
+		#NavBar {
+			border-bottom-color: $purple;
+		}
+	}
 
-      &.active {
-        background: $purple;
-      }
-    }
-  }
-  .tags {
-    > li {
-      strong {
-        background: $purple-shade;
-      }
-    }
-  }
-  .details {
-    > li {
-      &:before {
-        background: $purple;
-      }
-    }
-  }
+	.nav-list {
+		li {
+			&.active {
+				> a {
+					color: $purple;
+				}
+			}
+		}
+		a {
+			&:hover {
+				color: $purple;
+			}
+		}
+		> li {
+			&.dropdown {
+				&.show {
+					> a {
+						color: $purple;
+					}
+				}
+				ul {
+					li {
+						&.active {
+							a {
+								color: $purple;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#HeroCarousel {
+		.carousel-indicators {
+			li {
+				background: $purple;
+			}
+		}
+		.carousel-control {
+			background: $purple-shade;
+		}
+	}
+	#MainTiles {
+		background: $purple-tint;
+
+		.section-title {
+			h2 {
+				border-left-color: $purple;
+			}
+		}
+	}
+	.performance-list,
+	.event-list {
+		li {
+			h5 {
+				color: $purple;
+			}
+			&.with-overlay {
+				.img {
+					.status {
+						strong {
+							color: $purple;
+							border-color: $purple;
+						}
+					}
+				}
+			}
+		}
+	}
+	#Subscribe,
+	#Footer,
+	.scrollTo {
+		background: $purple;
+	}
+	#Tips {
+		background: $purple-tint;
+	}
+	.badge {
+		&-primary {
+			background: $purple;
+		}
+	}
+	.tooltip {
+		&-inner {
+			background-color: $purple;
+		}
+		&.bs-tooltip-auto[x-placement^="top"],
+		&.bs-tooltip-top {
+			.arrow {
+				&:before {
+					border-top-color: $purple;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="right"],
+		&.bs-tooltip-right {
+			.arrow {
+				&:before {
+					border-right-color: $purple;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="bottom"],
+		&.bs-tooltip-bottom {
+			.arrow {
+				&:before {
+					border-bottom-color: $purple;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="left"],
+		&.bs-tooltip-left {
+			.arrow {
+				&:before {
+					border-left-color: $purple;
+				}
+			}
+		}
+	}
+	.card {
+		&-grid {
+			ul {
+				li {
+					a:not(.btn) {
+						&:hover {
+							border-color: $purple;
+
+							h5 {
+								color: $purple;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-advertisement {
+			ul {
+				li {
+					&:hover {
+						border-color: $purple;
+					}
+				}
+			}
+		}
+		&-small {
+			li {
+				&:hover {
+					a {
+						color: $purple;
+					}
+				}
+				a {
+					&:hover {
+						border-color: $purple;
+						color: $purple;
+					}
+				}
+			}
+		}
+	}
+	.carousel {
+		&-custom {
+			.owl-carousel {
+				.owl-nav {
+					button {
+						background: $purple;
+					}
+				}
+			}
+			.owl-stage-outer {
+				.owl-stage {
+					.owl-item {
+						border-color: $purple;
+
+						&:hover {
+							border-color: $purple;
+						}
+						.carousel-slide-item {
+							border-color: $purple;
+
+							a {
+								color: $purple;
+							}
+						}
+					}
+				}
+			}
+			.owl-dots {
+				.owl-dot {
+					&.active {
+						background: $purple !important;
+					}
+				}
+			}
+		}
+	}
+	.accordion {
+		.card {
+			&-header {
+				background: $purple;
+			}
+		}
+	}
+	.social-media {
+		ul {
+			li {
+				a {
+					i {
+						color: $purple;
+					}
+				}
+			}
+		}
+	}
+	table {
+		&:not(.table-condensed) {
+			thead {
+				tr {
+					th {
+						background: $purple;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		li {
+			.page-link {
+				color: $purple;
+
+				&:hover {
+					background: $purple;
+				}
+			}
+			&.active {
+				.page-link {
+					background: $purple;
+				}
+			}
+		}
+	}
+	.custom-control-input {
+		&:checked {
+			~ .custom-control-label {
+				color: $purple;
+
+				&:before {
+					background: $purple-shade;
+				}
+				&:after {
+					background: $purple !important;
+				}
+			}
+		}
+	}
+	.stats {
+		.stat-box {
+			p {
+				strong {
+					color: $purple;
+				}
+			}
+		}
+	}
+	.contextual-stat-box {
+		.desc {
+			p {
+				strong {
+					color: $purple;
+				}
+			}
+		}
+	}
+	#Result {
+		.section-title {
+			h2,
+			p {
+				strong {
+					color: $purple;
+				}
+			}
+		}
+	}
+	.search-result {
+		li {
+			div {
+				strong {
+					background: $purple-shade;
+				}
+			}
+		}
+	}
+	.filter {
+		background: $purple-tint;
+
+		.btn-search,
+		.input-group-append {
+			color: $purple;
+		}
+	}
+	.datepicker {
+		em {
+			color: $purple;
+		}
+	}
+	#EventTab {
+		.btn {
+			background: $purple-shade;
+
+			&.active {
+				background: $purple;
+			}
+		}
+	}
+	.tags {
+		> li {
+			strong {
+				background: $purple-shade;
+			}
+		}
+	}
+	.details {
+		> li {
+			&:before {
+				background: $purple;
+			}
+		}
+	}
+	#Calendar {
+		.control {
+			a {
+				background: $purple;
+			}
+		}
+	}
+	.calendar-list {
+		li {
+			.box {
+				background: $purple;
+
+				&.cancelled {
+					background: $purple-tint;
+
+					.badge {
+						background: $purple-shade;
+					}
+				}
+			}
+		}
+	}
+	.daterangepicker {
+		.ranges {
+			li {
+				&.active {
+					color: $purple;
+				}
+				&:hover {
+					color: $purple-shade;
+				}
+			}
+		}
+		td {
+			&:not(.off) {
+				&.active {
+					background: $purple;
+
+					&:hover {
+						background: $purple-shade;
+					}
+				}
+				&.in-range {
+					background: $purple-tint;
+
+					&.active {
+						background: $purple;
+
+						&:hover {
+							background: $purple-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contrast {
+		.btn {
+			&.btn-primary {
+				background-color: $purple-contrast;
+			}
+			&.btn-secondary {
+				color: $purple-contrast;
+				border-color: $purple-contrast;
+
+				&.btn-ghost-active {
+					color: $purple-contrast;
+				}
+			}
+			&.btn-ghost {
+				&:hover,
+				&:focus {
+					color: $purple-contrast;
+				}
+				&.btn-ghost-active {
+					color: $purple-contrast;
+				}
+			}
+			&.btn-link {
+				color: $purple-contrast;
+			}
+		}
+		p {
+			a {
+				color: $purple-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $purple-contrast;
+				}
+			}
+		}
+		a {
+			&:not(.btn) {
+				color: $purple-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $purple-contrast;
+				}
+			}
+		}
+		&.show-mbl-menu {
+			#NavBar {
+				border-bottom-color: $purple-contrast;
+			}
+		}
+
+		.nav-list {
+			li {
+				&.active {
+					> a {
+						color: $purple-contrast;
+					}
+				}
+			}
+			a {
+				&:hover {
+					color: $purple-contrast;
+				}
+			}
+			> li {
+				&.dropdown {
+					&.show {
+						> a {
+							color: $purple-contrast;
+						}
+					}
+					ul {
+						li {
+							&.active {
+								a {
+									color: $purple-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#HeroCarousel {
+			.carousel-indicators {
+				li {
+					background: $purple-contrast;
+				}
+			}
+		}
+		#MainTiles {
+			.section-title {
+				h2 {
+					border-left-color: $purple-contrast;
+				}
+			}
+		}
+		.performance-list,
+		.event-list {
+			li {
+				h5 {
+					color: $purple-contrast;
+				}
+				&.with-overlay {
+					.img {
+						.status {
+							strong {
+								color: $purple-contrast;
+								border-color: $purple-contrast;
+							}
+						}
+					}
+				}
+			}
+		}
+		#Subscribe,
+		#Footer,
+		.scrollTo {
+			background: $purple-contrast;
+		}
+		.badge {
+			&-primary {
+				background: $purple-contrast;
+			}
+		}
+		.tooltip {
+			&-inner {
+				background-color: $purple-contrast;
+			}
+			&.bs-tooltip-auto[x-placement^="top"],
+			&.bs-tooltip-top {
+				.arrow {
+					&:before {
+						border-top-color: $purple-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="right"],
+			&.bs-tooltip-right {
+				.arrow {
+					&:before {
+						border-right-color: $purple-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="bottom"],
+			&.bs-tooltip-bottom {
+				.arrow {
+					&:before {
+						border-bottom-color: $purple-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="left"],
+			&.bs-tooltip-left {
+				.arrow {
+					&:before {
+						border-left-color: $purple-contrast;
+					}
+				}
+			}
+		}
+		.card {
+			&-grid {
+				ul {
+					li {
+						a:not(.btn) {
+							&:hover {
+								border-color: $purple-contrast;
+
+								h5 {
+									color: $purple-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-advertisement {
+				ul {
+					li {
+						&:hover {
+							border-color: $purple-contrast;
+						}
+					}
+				}
+			}
+			&-small {
+				li {
+					&:hover {
+						a {
+							color: $purple-contrast;
+						}
+					}
+					a {
+						&:hover {
+							border-color: $purple-contrast;
+							color: $purple-contrast;
+						}
+					}
+				}
+			}
+		}
+		.carousel {
+			&-custom {
+				.owl-carousel {
+					.owl-nav {
+						button {
+							background: $purple-contrast;
+						}
+					}
+				}
+				.owl-stage-outer {
+					.owl-stage {
+						.owl-item {
+							border-color: $purple-contrast;
+
+							&:hover {
+								border-color: $purple-contrast;
+							}
+							.carousel-slide-item {
+								border-color: $purple-contrast;
+
+								a {
+									color: $purple-contrast;
+								}
+							}
+						}
+					}
+				}
+				.owl-dots {
+					.owl-dot {
+						&.active {
+							background: $purple-contrast !important;
+						}
+					}
+				}
+			}
+		}
+		.accordion {
+			.card {
+				&-header {
+					background: $purple-contrast;
+				}
+			}
+		}
+		.social-media {
+			ul {
+				li {
+					a {
+						i {
+							color: $purple-contrast;
+						}
+					}
+				}
+			}
+		}
+		table {
+			&:not(.table-condensed) {
+				thead {
+					tr {
+						th {
+							background: $purple-contrast;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			li {
+				.page-link {
+					color: $purple-contrast;
+
+					&:hover {
+						background: $purple-contrast;
+					}
+				}
+				&.active {
+					.page-link {
+						background: $purple-contrast;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:checked {
+				~ .custom-control-label {
+					color: $purple-contrast;
+
+					&:after {
+						background: $purple-contrast !important;
+					}
+				}
+			}
+		}
+		.stats {
+			.stat-box {
+				p {
+					strong {
+						color: $purple-contrast;
+					}
+				}
+			}
+		}
+		.contextual-stat-box {
+			.desc {
+				p {
+					strong {
+						color: $purple-contrast;
+					}
+				}
+			}
+		}
+		#Result {
+			.section-title {
+				h2,
+				p {
+					strong {
+						color: $purple-contrast;
+					}
+				}
+			}
+		}
+		.filter {
+			.btn-search,
+			.input-group-append {
+				color: $purple-contrast;
+			}
+		}
+		.datepicker {
+			em {
+				color: $purple-contrast;
+			}
+		}
+		#EventTab {
+			.btn {
+				&.active {
+					background: $purple-contrast;
+				}
+			}
+		}
+		.details {
+			> li {
+				&:before {
+					background: $purple-contrast;
+				}
+			}
+		}
+		#Calendar {
+			.control {
+				a {
+					background: $purple-contrast;
+				}
+			}
+		}
+		.calendar-list {
+			li {
+				.box {
+					background: $purple-contrast;
+				}
+			}
+		}
+		.daterangepicker {
+			.ranges {
+				li {
+					&.active {
+						color: $purple-contrast;
+					}
+				}
+			}
+			td {
+				&:not(.off) {
+					&.active {
+						background: $purple-contrast;
+					}
+					&.in-range {
+						&.active {
+							background: $purple-contrast;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Blue Theme
 
 .blue {
-  .btn {
-    &.btn-primary {
-      background-color: $blue;
-  
-      &:hover,
-      &:active {
-        background: $blue-shade;
-      }
-      &:focus,
-      &.btn-active {
-        background: $blue-shade;
-      }
-    }
-    &.btn-secondary {
-      color: $blue;
-      border-color: $blue;
+	.btn {
+		&.btn-primary {
+			background-color: $blue;
 
-      &:hover,
-      &:focus {
-        color: $blue-shade;
-        border-color: $blue-shade;
-      }
-      &.btn-ghost-active {
-        color: $blue;
-      }
-    }
-    &.btn-ghost {
-  
-      &:hover,
-      &:focus {
-        color: $blue;
-      }
-      &.btn-ghost-active {
-        color: $blue;
-      }
-    }
-    &.btn-link {
-      color: $blue;
-  
-      &:hover,
-      &.btn-link-active {
-        color: $blue-shade;
-      }
-    }
-  }
-  p {
-    a {
-      color: $blue;
-  
-      &:hover,
-      &:focus,
-      &:active {
-        color: $blue;
-      }
-    }
-  }
-  a {
-    color: $blue;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: $blue;
-    }
-  }
-  &.show-mbl-menu {
-    #NavBar {
-      border-bottom-color: $blue;
-    }
-  }
-  
-  .nav-list {
-    li {
-      &.active {
-        > a {
-          color: $blue;
-        }
-      }
-    }
-    a {
-      &:hover {
-        color: $blue;
-      }
-    }
-    > li {
-      &.dropdown {
+			&:hover,
+			&:active {
+				background: $blue-shade;
+			}
+			&:focus,
+			&.btn-active {
+				background: $blue-shade;
+			}
+		}
+		&.btn-secondary {
+			color: $blue;
+			border-color: $blue;
 
-        &.show {
-          > a {
-            color: $blue;
-          }
-        }
-        ul {
-          li {
-            &.active {
-              a {
-                color: $blue;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #HeroCarousel {
-    .carousel-indicators {
-      li {
-        background: $blue;
-      }
-    }
-    .carousel-control {
-      background: $blue-shade;
-    }
-  }
-  #MainTiles {
-    background: $blue-tint;
+			&:hover,
+			&:focus {
+				color: $blue-shade;
+				border-color: $blue-shade;
+			}
+			&.btn-ghost-active {
+				color: $blue;
+			}
+		}
+		&.btn-ghost {
+			&:hover,
+			&:focus {
+				color: $blue;
+			}
+			&.btn-ghost-active {
+				color: $blue;
+			}
+		}
+		&.btn-link {
+			color: $blue;
 
-    .section-title {
-      h2 {
-        border-left-color: $blue;
-      }
-    }
-  }
-  .performance-list,
-  .event-list {
-    li {
-      h5 {
-        color: $blue;
-      }
-      &.with-overlay {
-        .img {
-          .status {
-            strong {
-              color: $blue;
-              border-color: $blue;
-            }
-          }
-        }
-      }
-    }
-  }
-  #Subscribe,
-  #Footer,
-  .scrollTo {
-    background: $blue;
-  }
-  #Tips {
-    background: $blue-tint;
-  }
-  .badge {
-    &-primary {
-      background: $blue;
-    }
-  }
-  .tooltip {
-    &-inner {
-      background-color: $blue;
-    }
-    &.bs-tooltip-auto[x-placement^="top"],
-    &.bs-tooltip-top {
-      .arrow {
-        &:before {
-          border-top-color: $blue;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="right"],
-    &.bs-tooltip-right {
-      .arrow {
-        &:before {
-          border-right-color: $blue;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="bottom"],
-    &.bs-tooltip-bottom {
-      .arrow {
-        &:before {
-          border-bottom-color: $blue;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="left"],
-    &.bs-tooltip-left {
-      .arrow {
-        &:before {
-          border-left-color: $blue;
-        }
-      }
-    }
-  }
-  .card {
-    &-grid {
-      ul {
-        li {
-          a:not(.btn) {
-            &:hover {
-              border-color: $blue;
-  
-              h5 {
-                color: $blue;
-              }
-            }
-          }
-        }
-      }
-    }
-    &-advertisement {
-      ul {
-        li { 
-          &:hover {
-            border-color: $blue;
-          }
-        }
-      }
-    }
-    &-small {
-      li {
-  
-        &:hover {
-          a {
-            color: $blue;
-          }
-        }
-        a {
-          &:hover {
-            border-color: $blue;
-            color: $blue;
-          }
-        }
-      }
-    }
-  }
-  .carousel {
-    &-custom {
-      .owl-carousel {
-        .owl-nav {
-          button {
-            background: $blue;
-          }
-        }
-      }
-      .owl-stage-outer {
-        .owl-stage {
-          .owl-item {
-            border-color: $blue;
-  
-            &:hover {
-              border-color: $blue;
-            } 
-            .carousel-slide-item {
-              border-color: $blue;
-  
-              a {
-                color: $blue;
-              }
-            }
-          }
-        }
-      }
-      .owl-dots {
-        .owl-dot {
-          &.active {
-            background: $blue !important;
-          }
-        }
-      }
-    }
-  }
-  .accordion {
-    .card {
-      &-header {
-        background: $blue;
-      }
-    }
-  }
-  .social-media {
-    ul {
-      li {
-        a {
-          i {
-            color: $blue;
-          }
-        }
-      }
-    }
-  }
-  table {
-    width: 100%;
-  
-    &:not(.table-condensed) {
-      thead {
-        tr {
-          th {
-            background: $blue;
-          }
-        }
-      }
-    }
-  }
-  .pagination { 
-    li {
-      .page-link {
-        color: $blue;
+			&:hover,
+			&.btn-link-active {
+				color: $blue-shade;
+			}
+		}
+	}
+	p {
+		a {
+			color: $blue;
 
-        &:hover {
-          background: $blue;
-        }
-      }
-      &.active {
-        .page-link {
-          background: $blue;
-        }
-      }
-    }
-  }
-  .custom-control-input {
-    &:checked {
-      ~ .custom-control-label {
-        color: $blue;
-  
-        &:before {
-          background: $blue-shade;
-        }
-        &:after {
-          background: $blue !important;
-        }
-      }
-    }
-  }
-  .stats {
-    .stat-box {
-      p {
-        strong {
-          color: $blue;
-        }
-      }
-    }
-  }
-  .contextual-stat-box {
-    .desc {
-      p {
-        strong {
-          color: $blue;
-        }
-      }
-    }
-  }
-  #Result {
-    .section-title {
-      h2,
-      p {
-        strong {
-          color: $blue;
-        }
-      }
-    }
-  }
-  .search-result {
-    li {
-      div {
-        strong {
-          background: $blue-shade;
-        }
-      }
-    }
-  }
-  .filter {
-    background: $blue-tint;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $blue;
+			}
+		}
+	}
+	a {
+		&:not(.btn) {
+			color: $blue;
 
-    .btn-search,
-    .input-group-append {
-      color: $blue;
-    }
-  }
-  .datepicker {
-    table {
-      tr {
-        td {
-          .active {
-            background-color: $blue;
-            &:hover {
-              background-color: $blue;
-              &:hover {
-                background-color: $blue;
-              }
-              &:active {
-                background-color: $blue;
-              }
-            }
-            &:active {
-              background-color: $blue;
-            }
-            &:hover.active {
-              background-color: $blue;
-            }
-            &:hover.disabled {
-              background-color: $blue;
-            }
-            &:hover[disabled] {
-              background-color: $blue;
-            }
-            &.disabled {
-              &:active {
-                background-color: $blue;
-              }
-              &:hover.active {
-                background-color: $blue;
-              }
-              &:hover.disabled {
-                background-color: $blue;
-              }
-              &:hover[disabled] {
-                background-color: $blue;
-              }
-            }
-          }
-        }
-        td.active.active {
-          background-color: $blue;
-        }
-        td.active.disabled.active {
-          background-color: $blue;
-        }
-        td.active.disabled.disabled {
-          background-color: $blue;
-        }
-        td.active[disabled] {
-          background-color: $blue;
-        }
-        td.active.disabled[disabled] {
-          background-color: $blue;
-        }
-      }
-    }
-  }
-  #EventTab {
-    .btn {
-      background: $blue-shade;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $blue;
+			}
+		}
+	}
+	&.show-mbl-menu {
+		#NavBar {
+			border-bottom-color: $blue;
+		}
+	}
 
-      &.active {
-        background: $blue;
-      }
-    }
-  }
-  .tags {
-    > li {
-      strong {
-        background: $blue-shade;
-      }
-    }
-  }
-  .details {
-    > li {
-      &:before {
-        background: $blue;
-      }
-    }
-  }
+	.nav-list {
+		li {
+			&.active {
+				> a {
+					color: $blue;
+				}
+			}
+		}
+		a {
+			&:hover {
+				color: $blue;
+			}
+		}
+		> li {
+			&.dropdown {
+				&.show {
+					> a {
+						color: $blue;
+					}
+				}
+				ul {
+					li {
+						&.active {
+							a {
+								color: $blue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#HeroCarousel {
+		.carousel-indicators {
+			li {
+				background: $blue;
+			}
+		}
+		.carousel-control {
+			background: $blue-shade;
+		}
+	}
+	#MainTiles {
+		background: $blue-tint;
+
+		.section-title {
+			h2 {
+				border-left-color: $blue;
+			}
+		}
+	}
+	.performance-list,
+	.event-list {
+		li {
+			h5 {
+				color: $blue;
+			}
+			&.with-overlay {
+				.img {
+					.status {
+						strong {
+							color: $blue;
+							border-color: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+	#Subscribe,
+	#Footer,
+	.scrollTo {
+		background: $blue;
+	}
+	#Tips {
+		background: $blue-tint;
+	}
+	.badge {
+		&-primary {
+			background: $blue;
+		}
+	}
+	.tooltip {
+		&-inner {
+			background-color: $blue;
+		}
+		&.bs-tooltip-auto[x-placement^="top"],
+		&.bs-tooltip-top {
+			.arrow {
+				&:before {
+					border-top-color: $blue;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="right"],
+		&.bs-tooltip-right {
+			.arrow {
+				&:before {
+					border-right-color: $blue;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="bottom"],
+		&.bs-tooltip-bottom {
+			.arrow {
+				&:before {
+					border-bottom-color: $blue;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="left"],
+		&.bs-tooltip-left {
+			.arrow {
+				&:before {
+					border-left-color: $blue;
+				}
+			}
+		}
+	}
+	.card {
+		&-grid {
+			ul {
+				li {
+					a:not(.btn) {
+						&:hover {
+							border-color: $blue;
+
+							h5 {
+								color: $blue;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-advertisement {
+			ul {
+				li {
+					&:hover {
+						border-color: $blue;
+					}
+				}
+			}
+		}
+		&-small {
+			li {
+				&:hover {
+					a {
+						color: $blue;
+					}
+				}
+				a {
+					&:hover {
+						border-color: $blue;
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+	.carousel {
+		&-custom {
+			.owl-carousel {
+				.owl-nav {
+					button {
+						background: $blue;
+					}
+				}
+			}
+			.owl-stage-outer {
+				.owl-stage {
+					.owl-item {
+						border-color: $blue;
+
+						&:hover {
+							border-color: $blue;
+						}
+						.carousel-slide-item {
+							border-color: $blue;
+
+							a {
+								color: $blue;
+							}
+						}
+					}
+				}
+			}
+			.owl-dots {
+				.owl-dot {
+					&.active {
+						background: $blue !important;
+					}
+				}
+			}
+		}
+	}
+	.accordion {
+		.card {
+			&-header {
+				background: $blue;
+			}
+		}
+	}
+	.social-media {
+		ul {
+			li {
+				a {
+					i {
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+	table {
+		&:not(.table-condensed) {
+			thead {
+				tr {
+					th {
+						background: $blue;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		li {
+			.page-link {
+				color: $blue;
+
+				&:hover {
+					background: $blue;
+				}
+			}
+			&.active {
+				.page-link {
+					background: $blue;
+				}
+			}
+		}
+	}
+	.custom-control-input {
+		&:checked {
+			~ .custom-control-label {
+				color: $blue;
+
+				&:before {
+					background: $blue-shade;
+				}
+				&:after {
+					background: $blue !important;
+				}
+			}
+		}
+	}
+	.stats {
+		.stat-box {
+			p {
+				strong {
+					color: $blue;
+				}
+			}
+		}
+	}
+	.contextual-stat-box {
+		.desc {
+			p {
+				strong {
+					color: $blue;
+				}
+			}
+		}
+	}
+	#Result {
+		.section-title {
+			h2,
+			p {
+				strong {
+					color: $blue;
+				}
+			}
+		}
+	}
+	.search-result {
+		li {
+			div {
+				strong {
+					background: $blue-shade;
+				}
+			}
+		}
+	}
+	.filter {
+		background: $blue-tint;
+
+		.btn-search,
+		.input-group-append {
+			color: $blue;
+		}
+	}
+	.datepicker {
+		em {
+			color: $blue;
+		}
+	}
+	#EventTab {
+		.btn {
+			background: $blue-shade;
+
+			&.active {
+				background: $blue;
+			}
+		}
+	}
+	.tags {
+		> li {
+			strong {
+				background: $blue-shade;
+			}
+		}
+	}
+	.details {
+		> li {
+			&:before {
+				background: $blue;
+			}
+		}
+	}
+	#Calendar {
+		.control {
+			a {
+				background: $blue;
+			}
+		}
+	}
+	.calendar-list {
+		li {
+			.box {
+				background: $blue;
+
+				&.cancelled {
+					background: $blue-tint;
+
+					.badge {
+						background: $blue-shade;
+					}
+				}
+			}
+		}
+	}
+	.daterangepicker {
+		.ranges {
+			li {
+				&.active {
+					color: $blue;
+				}
+				&:hover {
+					color: $blue-shade;
+				}
+			}
+		}
+		td {
+			&:not(.off) {
+				&.active {
+					background: $blue;
+
+					&:hover {
+						background: $blue-shade;
+					}
+				}
+				&.in-range {
+					background: $blue-tint;
+
+					&.active {
+						background: $blue;
+
+						&:hover {
+							background: $blue-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contrast {
+		.btn {
+			&.btn-primary {
+				background-color: $blue-contrast;
+			}
+			&.btn-secondary {
+				color: $blue-contrast;
+				border-color: $blue-contrast;
+
+				&.btn-ghost-active {
+					color: $blue-contrast;
+				}
+			}
+			&.btn-ghost {
+				&:hover,
+				&:focus {
+					color: $blue-contrast;
+				}
+				&.btn-ghost-active {
+					color: $blue-contrast;
+				}
+			}
+			&.btn-link {
+				color: $blue-contrast;
+			}
+		}
+		p {
+			a {
+				color: $blue-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $blue-contrast;
+				}
+			}
+		}
+		a {
+			&:not(.btn) {
+				color: $blue-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $blue-contrast;
+				}
+			}
+		}
+		&.show-mbl-menu {
+			#NavBar {
+				border-bottom-color: $blue-contrast;
+			}
+		}
+
+		.nav-list {
+			li {
+				&.active {
+					> a {
+						color: $blue-contrast;
+					}
+				}
+			}
+			a {
+				&:hover {
+					color: $blue-contrast;
+				}
+			}
+			> li {
+				&.dropdown {
+					&.show {
+						> a {
+							color: $blue-contrast;
+						}
+					}
+					ul {
+						li {
+							&.active {
+								a {
+									color: $blue-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#HeroCarousel {
+			.carousel-indicators {
+				li {
+					background: $blue-contrast;
+				}
+			}
+		}
+		#MainTiles {
+			.section-title {
+				h2 {
+					border-left-color: $blue-contrast;
+				}
+			}
+		}
+		.performance-list,
+		.event-list {
+			li {
+				h5 {
+					color: $blue-contrast;
+				}
+				&.with-overlay {
+					.img {
+						.status {
+							strong {
+								color: $blue-contrast;
+								border-color: $blue-contrast;
+							}
+						}
+					}
+				}
+			}
+		}
+		#Subscribe,
+		#Footer,
+		.scrollTo {
+			background: $blue-contrast;
+		}
+		.badge {
+			&-primary {
+				background: $blue-contrast;
+			}
+		}
+		.tooltip {
+			&-inner {
+				background-color: $blue-contrast;
+			}
+			&.bs-tooltip-auto[x-placement^="top"],
+			&.bs-tooltip-top {
+				.arrow {
+					&:before {
+						border-top-color: $blue-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="right"],
+			&.bs-tooltip-right {
+				.arrow {
+					&:before {
+						border-right-color: $blue-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="bottom"],
+			&.bs-tooltip-bottom {
+				.arrow {
+					&:before {
+						border-bottom-color: $blue-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="left"],
+			&.bs-tooltip-left {
+				.arrow {
+					&:before {
+						border-left-color: $blue-contrast;
+					}
+				}
+			}
+		}
+		.card {
+			&-grid {
+				ul {
+					li {
+						a:not(.btn) {
+							&:hover {
+								border-color: $blue-contrast;
+
+								h5 {
+									color: $blue-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-advertisement {
+				ul {
+					li {
+						&:hover {
+							border-color: $blue-contrast;
+						}
+					}
+				}
+			}
+			&-small {
+				li {
+					&:hover {
+						a {
+							color: $blue-contrast;
+						}
+					}
+					a {
+						&:hover {
+							border-color: $blue-contrast;
+							color: $blue-contrast;
+						}
+					}
+				}
+			}
+		}
+		.carousel {
+			&-custom {
+				.owl-carousel {
+					.owl-nav {
+						button {
+							background: $blue-contrast;
+						}
+					}
+				}
+				.owl-stage-outer {
+					.owl-stage {
+						.owl-item {
+							border-color: $blue-contrast;
+
+							&:hover {
+								border-color: $blue-contrast;
+							}
+							.carousel-slide-item {
+								border-color: $blue-contrast;
+
+								a {
+									color: $blue-contrast;
+								}
+							}
+						}
+					}
+				}
+				.owl-dots {
+					.owl-dot {
+						&.active {
+							background: $blue-contrast !important;
+						}
+					}
+				}
+			}
+		}
+		.accordion {
+			.card {
+				&-header {
+					background: $blue-contrast;
+				}
+			}
+		}
+		.social-media {
+			ul {
+				li {
+					a {
+						i {
+							color: $blue-contrast;
+						}
+					}
+				}
+			}
+		}
+		table {
+			&:not(.table-condensed) {
+				thead {
+					tr {
+						th {
+							background: $blue-contrast;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			li {
+				.page-link {
+					color: $blue-contrast;
+
+					&:hover {
+						background: $blue-contrast;
+					}
+				}
+				&.active {
+					.page-link {
+						background: $blue-contrast;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:checked {
+				~ .custom-control-label {
+					color: $blue-contrast;
+
+					&:after {
+						background: $blue-contrast !important;
+					}
+				}
+			}
+		}
+		.stats {
+			.stat-box {
+				p {
+					strong {
+						color: $blue-contrast;
+					}
+				}
+			}
+		}
+		.contextual-stat-box {
+			.desc {
+				p {
+					strong {
+						color: $blue-contrast;
+					}
+				}
+			}
+		}
+		#Result {
+			.section-title {
+				h2,
+				p {
+					strong {
+						color: $blue-contrast;
+					}
+				}
+			}
+		}
+		.filter {
+			.btn-search,
+			.input-group-append {
+				color: $blue-contrast;
+			}
+		}
+		.datepicker {
+			em {
+				color: $blue-contrast;
+			}
+		}
+		#EventTab {
+			.btn {
+				&.active {
+					background: $blue-contrast;
+				}
+			}
+		}
+		.details {
+			> li {
+				&:before {
+					background: $blue-contrast;
+				}
+			}
+		}
+		#Calendar {
+			.control {
+				a {
+					background: $blue-contrast;
+				}
+			}
+		}
+		.calendar-list {
+			li {
+				.box {
+					background: $blue-contrast;
+				}
+			}
+		}
+		.daterangepicker {
+			.ranges {
+				li {
+					&.active {
+						color: $blue-contrast;
+					}
+				}
+			}
+			td {
+				&:not(.off) {
+					&.active {
+						background: $blue-contrast;
+					}
+					&.in-range {
+						&.active {
+							background: $blue-contrast;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Red Theme
 
 .red {
-  .btn {
-    &.btn-primary {
-      background-color: $red;
-  
-      &:hover,
-      &:active {
-        background: $red-shade;
-      }
-      &:focus,
-      &.btn-active {
-        background: $red-shade;
-      }
-    }
-    &.btn-secondary {
-      color: $red;
-      border-color: $red;
+	.btn {
+		&.btn-primary {
+			background-color: $red;
 
-      &:hover,
-      &:focus {
-        color: $red-shade;
-        border-color: $red-shade;
-      }
-      &.btn-ghost-active {
-        color: $red;
-      }
-    }
-    &.btn-ghost {
-  
-      &:hover,
-      &:focus {
-        color: $red;
-      }
-      &.btn-ghost-active {
-        color: $red;
-      }
-    }
-    &.btn-link {
-      color: $red;
-  
-      &:hover,
-      &.btn-link-active {
-        color: $red-shade;
-      }
-    }
-  }
-  p {
-    a {
-      color: $red;
-  
-      &:hover,
-      &:focus,
-      &:active {
-        color: $red;
-      }
-    }
-  }
-  a {
-    color: $red;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: $red;
-    }
-  }
-  &.show-mbl-menu {
-    #NavBar {
-      border-bottom-color: $red;
-    }
-  }
-  
-  .nav-list {
-    li {
-      &.active {
-        > a {
-          color: $red;
-        }
-      }
-    }
-    a {
-      &:hover {
-        color: $red;
-      }
-    }
-    > li {
-      &.dropdown {
+			&:hover,
+			&:active {
+				background: $red-shade;
+			}
+			&:focus,
+			&.btn-active {
+				background: $red-shade;
+			}
+		}
+		&.btn-secondary {
+			color: $red;
+			border-color: $red;
 
-        &.show {
-          > a {
-            color: $red;
-          }
-        }
-        ul {
-          li {
-            &.active {
-              a {
-                color: $red;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  #HeroCarousel {
-    .carousel-indicators {
-      li {
-        background: $red;
-      }
-    }
-    .carousel-control {
-      background: $red-shade;
-    }
-  }
-  #MainTiles {
-    background: $red-tint;
+			&:hover,
+			&:focus {
+				color: $red-shade;
+				border-color: $red-shade;
+			}
+			&.btn-ghost-active {
+				color: $red;
+			}
+		}
+		&.btn-ghost {
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+			&.btn-ghost-active {
+				color: $red;
+			}
+		}
+		&.btn-link {
+			color: $red;
 
-    .section-title {
-      h2 {
-        border-left-color: $red;
-      }
-    }
-  }
-  .performance-list,
-  .event-list {
-    li {
-      h5 {
-        color: $red;
-      }
-      &.with-overlay {
-        .img {
-          .status {
-            strong {
-              color: $red;
-              border-color: $red;
-            }
-          }
-        }
-      }
-    }
-  }
-  #Subscribe,
-  #Footer,
-  .scrollTo {
-    background: $red;
-  }
-  #Tips {
-    background: $red-tint;
-  }
-  .badge {
-    &-primary {
-      background: $red;
-    }
-  }
-  .tooltip {
-    &-inner {
-      background-color: $red;
-    }
-    &.bs-tooltip-auto[x-placement^="top"],
-    &.bs-tooltip-top {
-      .arrow {
-        &:before {
-          border-top-color: $red;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="right"],
-    &.bs-tooltip-right {
-      .arrow {
-        &:before {
-          border-right-color: $red;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="bottom"],
-    &.bs-tooltip-bottom {
-      .arrow {
-        &:before {
-          border-bottom-color: $red;
-        }
-      }
-    }
-    &.bs-tooltip-auto[x-placement^="left"],
-    &.bs-tooltip-left {
-      .arrow {
-        &:before {
-          border-left-color: $red;
-        }
-      }
-    }
-  }
-  .card {
-    &-grid {
-      ul {
-        li {
-          a:not(.btn) {
-            &:hover {
-              border-color: $red;
-  
-              h5 {
-                color: $red;
-              }
-            }
-          }
-        }
-      }
-    }
-    &-advertisement {
-      ul {
-        li { 
-          &:hover {
-            border-color: $red;
-          }
-        }
-      }
-    }
-    &-small {
-      li {
-  
-        &:hover {
-          a {
-            color: $red;
-          }
-        }
-        a {
-          &:hover {
-            border-color: $red;
-            color: $red;
-          }
-        }
-      }
-    }
-  }
-  .carousel {
-    &-custom {
-      .owl-carousel {
-        .owl-nav {
-          button {
-            background: $red;
-          }
-        }
-      }
-      .owl-stage-outer {
-        .owl-stage {
-          .owl-item {
-            border-color: $red;
-  
-            &:hover {
-              border-color: $red;
-            } 
-            .carousel-slide-item {
-              border-color: $red;
-  
-              a {
-                color: $red;
-              }
-            }
-          }
-        }
-      }
-      .owl-dots {
-        .owl-dot {
-          &.active {
-            background: $red !important;
-          }
-        }
-      }
-    }
-  }
-  .accordion {
-    .card {
-      &-header {
-        background: $red;
-      }
-    }
-  }
-  .social-media {
-    ul {
-      li {
-        a {
-          i {
-            color: $red;
-          }
-        }
-      }
-    }
-  }
-  table {
-    width: 100%;
-  
-    &:not(.table-condensed) {
-      thead {
-        tr {
-          th {
-            background: $red;
-          }
-        }
-      }
-    }
-  }
-  .pagination { 
-    li {
-      .page-link {
-        color: $red;
+			&:hover,
+			&.btn-link-active {
+				color: $red-shade;
+			}
+		}
+	}
+	p {
+		a {
+			color: $red;
 
-        &:hover {
-          background: $red;
-        }
-      }
-      &.active {
-        .page-link {
-          background: $red;
-        }
-      }
-    }
-  }
-  .custom-control-input {
-    &:checked {
-      ~ .custom-control-label {
-        color: $red;
-  
-        &:before {
-          background: $red-shade;
-        }
-        &:after {
-          background: $red !important;
-        }
-      }
-    }
-  }
-  .stats {
-    .stat-box {
-      p {
-        strong {
-          color: $red;
-        }
-      }
-    }
-  }
-  .contextual-stat-box {
-    .desc {
-      p {
-        strong {
-          color: $red;
-        }
-      }
-    }
-  }
-  #Result {
-    .section-title {
-      h2,
-      p {
-        strong {
-          color: $red;
-        }
-      }
-    }
-  }
-  .search-result {
-    li {
-      div {
-        strong {
-          background: $red-shade;
-        }
-      }
-    }
-  }
-  .filter {
-    background: $red-tint;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $red;
+			}
+		}
+	}
+	a {
+		&:not(.btn) {
+			color: $red;
 
-    .btn-search,
-    .input-group-append {
-      color: $red;
-    }
-  }
-  .datepicker {
-    table {
-      tr {
-        td {
-          .active {
-            background-color: $red;
-            &:hover {
-              background-color: $red;
-              &:hover {
-                background-color: $red;
-              }
-              &:active {
-                background-color: $red;
-              }
-            }
-            &:active {
-              background-color: $red;
-            }
-            &:hover.active {
-              background-color: $red;
-            }
-            &:hover.disabled {
-              background-color: $red;
-            }
-            &:hover[disabled] {
-              background-color: $red;
-            }
-            &.disabled {
-              &:active {
-                background-color: $red;
-              }
-              &:hover.active {
-                background-color: $red;
-              }
-              &:hover.disabled {
-                background-color: $red;
-              }
-              &:hover[disabled] {
-                background-color: $red;
-              }
-            }
-          }
-        }
-        td.active.active {
-          background-color: $red;
-        }
-        td.active.disabled.active {
-          background-color: $red;
-        }
-        td.active.disabled.disabled {
-          background-color: $red;
-        }
-        td.active[disabled] {
-          background-color: $red;
-        }
-        td.active.disabled[disabled] {
-          background-color: $red;
-        }
-      }
-    }
-  }
-  #EventTab {
-    .btn {
-      background: $red-shade;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $red;
+			}
+		}
+	}
+	&.show-mbl-menu {
+		#NavBar {
+			border-bottom-color: $red;
+		}
+	}
 
-      &.active {
-        background: $red;
-      }
-    }
-  }
-  .tags {
-    > li {
-      strong {
-        background: $red-shade;
-      }
-    }
-  }
-  .details {
-    > li {
-      &:before {
-        background: $red;
-      }
-    }
-  }
+	.nav-list {
+		li {
+			&.active {
+				> a {
+					color: $red;
+				}
+			}
+		}
+		a {
+			&:hover {
+				color: $red;
+			}
+		}
+		> li {
+			&.dropdown {
+				&.show {
+					> a {
+						color: $red;
+					}
+				}
+				ul {
+					li {
+						&.active {
+							a {
+								color: $red;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#HeroCarousel {
+		.carousel-indicators {
+			li {
+				background: $red;
+			}
+		}
+		.carousel-control {
+			background: $red-shade;
+		}
+	}
+	#MainTiles {
+		background: $red-tint;
+
+		.section-title {
+			h2 {
+				border-left-color: $red;
+			}
+		}
+	}
+	.performance-list,
+	.event-list {
+		li {
+			h5 {
+				color: $red;
+			}
+			&.with-overlay {
+				.img {
+					.status {
+						strong {
+							color: $red;
+							border-color: $red;
+						}
+					}
+				}
+			}
+		}
+	}
+	#Subscribe,
+	#Footer,
+	.scrollTo {
+		background: $red;
+	}
+	#Tips {
+		background: $red-tint;
+	}
+	.badge {
+		&-primary {
+			background: $red;
+		}
+	}
+	.tooltip {
+		&-inner {
+			background-color: $red;
+		}
+		&.bs-tooltip-auto[x-placement^="top"],
+		&.bs-tooltip-top {
+			.arrow {
+				&:before {
+					border-top-color: $red;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="right"],
+		&.bs-tooltip-right {
+			.arrow {
+				&:before {
+					border-right-color: $red;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="bottom"],
+		&.bs-tooltip-bottom {
+			.arrow {
+				&:before {
+					border-bottom-color: $red;
+				}
+			}
+		}
+		&.bs-tooltip-auto[x-placement^="left"],
+		&.bs-tooltip-left {
+			.arrow {
+				&:before {
+					border-left-color: $red;
+				}
+			}
+		}
+	}
+	.card {
+		&-grid {
+			ul {
+				li {
+					a:not(.btn) {
+						&:hover {
+							border-color: $red;
+
+							h5 {
+								color: $red;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-advertisement {
+			ul {
+				li {
+					&:hover {
+						border-color: $red;
+					}
+				}
+			}
+		}
+		&-small {
+			li {
+				&:hover {
+					a {
+						color: $red;
+					}
+				}
+				a {
+					&:hover {
+						border-color: $red;
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	.carousel {
+		&-custom {
+			.owl-carousel {
+				.owl-nav {
+					button {
+						background: $red;
+					}
+				}
+			}
+			.owl-stage-outer {
+				.owl-stage {
+					.owl-item {
+						border-color: $red;
+
+						&:hover {
+							border-color: $red;
+						}
+						.carousel-slide-item {
+							border-color: $red;
+
+							a {
+								color: $red;
+							}
+						}
+					}
+				}
+			}
+			.owl-dots {
+				.owl-dot {
+					&.active {
+						background: $red !important;
+					}
+				}
+			}
+		}
+	}
+	.accordion {
+		.card {
+			&-header {
+				background: $red;
+			}
+		}
+	}
+	.social-media {
+		ul {
+			li {
+				a {
+					i {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	table {
+		&:not(.table-condensed) {
+			thead {
+				tr {
+					th {
+						background: $red;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		li {
+			.page-link {
+				color: $red;
+
+				&:hover {
+					background: $red;
+				}
+			}
+			&.active {
+				.page-link {
+					background: $red;
+				}
+			}
+		}
+	}
+	.custom-control-input {
+		&:checked {
+			~ .custom-control-label {
+				color: $red;
+
+				&:before {
+					background: $red-shade;
+				}
+				&:after {
+					background: $red !important;
+				}
+			}
+		}
+	}
+	.stats {
+		.stat-box {
+			p {
+				strong {
+					color: $red;
+				}
+			}
+		}
+	}
+	.contextual-stat-box {
+		.desc {
+			p {
+				strong {
+					color: $red;
+				}
+			}
+		}
+	}
+	#Result {
+		.section-title {
+			h2,
+			p {
+				strong {
+					color: $red;
+				}
+			}
+		}
+	}
+	.search-result {
+		li {
+			div {
+				strong {
+					background: $red-shade;
+				}
+			}
+		}
+	}
+	.filter {
+		background: $red-tint;
+
+		.btn-search,
+		.input-group-append {
+			color: $red;
+		}
+	}
+	.datepicker {
+		em {
+			color: $red;
+		}
+	}
+	#EventTab {
+		.btn {
+			background: $red-shade;
+
+			&.active {
+				background: $red;
+			}
+		}
+	}
+	.tags {
+		> li {
+			strong {
+				background: $red-shade;
+			}
+		}
+	}
+	.details {
+		> li {
+			&:before {
+				background: $red;
+			}
+		}
+	}
+	#Calendar {
+		.control {
+			a {
+				background: $red;
+			}
+		}
+	}
+	.calendar-list {
+		li {
+			.box {
+				background: $red;
+
+				&.cancelled {
+					background: $red-tint;
+
+					.badge {
+						background: $red-shade;
+					}
+				}
+			}
+		}
+	}
+	.daterangepicker {
+		.ranges {
+			li {
+				&.active {
+					color: $red;
+				}
+				&:hover {
+					color: $red-shade;
+				}
+			}
+		}
+		td {
+			&:not(.off) {
+				&.active {
+					background: $red;
+
+					&:hover {
+						background: $red-shade;
+					}
+				}
+				&.in-range {
+					background: $red-tint;
+
+					&.active {
+						background: $red;
+
+						&:hover {
+							background: $red-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contrast {
+		.btn {
+			&.btn-primary {
+				background-color: $red-contrast;
+			}
+			&.btn-secondary {
+				color: $red-contrast;
+				border-color: $red-contrast;
+
+				&.btn-ghost-active {
+					color: $red-contrast;
+				}
+			}
+			&.btn-ghost {
+				&:hover,
+				&:focus {
+					color: $red-contrast;
+				}
+				&.btn-ghost-active {
+					color: $red-contrast;
+				}
+			}
+			&.btn-link {
+				color: $red-contrast;
+			}
+		}
+		p {
+			a {
+				color: $red-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $red-contrast;
+				}
+			}
+		}
+		a {
+			&:not(.btn) {
+				color: $red-contrast;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $red-contrast;
+				}
+			}
+		}
+		&.show-mbl-menu {
+			#NavBar {
+				border-bottom-color: $red-contrast;
+			}
+		}
+
+		.nav-list {
+			li {
+				&.active {
+					> a {
+						color: $red-contrast;
+					}
+				}
+			}
+			a {
+				&:hover {
+					color: $red-contrast;
+				}
+			}
+			> li {
+				&.dropdown {
+					&.show {
+						> a {
+							color: $red-contrast;
+						}
+					}
+					ul {
+						li {
+							&.active {
+								a {
+									color: $red-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#HeroCarousel {
+			.carousel-indicators {
+				li {
+					background: $red-contrast;
+				}
+			}
+		}
+		#MainTiles {
+			.section-title {
+				h2 {
+					border-left-color: $red-contrast;
+				}
+			}
+		}
+		.performance-list,
+		.event-list {
+			li {
+				h5 {
+					color: $red-contrast;
+				}
+				&.with-overlay {
+					.img {
+						.status {
+							strong {
+								color: $red-contrast;
+								border-color: $red-contrast;
+							}
+						}
+					}
+				}
+			}
+		}
+		#Subscribe,
+		#Footer,
+		.scrollTo {
+			background: $red-contrast;
+		}
+		.badge {
+			&-primary {
+				background: $red-contrast;
+			}
+		}
+		.tooltip {
+			&-inner {
+				background-color: $red-contrast;
+			}
+			&.bs-tooltip-auto[x-placement^="top"],
+			&.bs-tooltip-top {
+				.arrow {
+					&:before {
+						border-top-color: $red-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="right"],
+			&.bs-tooltip-right {
+				.arrow {
+					&:before {
+						border-right-color: $red-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="bottom"],
+			&.bs-tooltip-bottom {
+				.arrow {
+					&:before {
+						border-bottom-color: $red-contrast;
+					}
+				}
+			}
+			&.bs-tooltip-auto[x-placement^="left"],
+			&.bs-tooltip-left {
+				.arrow {
+					&:before {
+						border-left-color: $red-contrast;
+					}
+				}
+			}
+		}
+		.card {
+			&-grid {
+				ul {
+					li {
+						a:not(.btn) {
+							&:hover {
+								border-color: $red-contrast;
+
+								h5 {
+									color: $red-contrast;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-advertisement {
+				ul {
+					li {
+						&:hover {
+							border-color: $red-contrast;
+						}
+					}
+				}
+			}
+			&-small {
+				li {
+					&:hover {
+						a {
+							color: $red-contrast;
+						}
+					}
+					a {
+						&:hover {
+							border-color: $red-contrast;
+							color: $red-contrast;
+						}
+					}
+				}
+			}
+		}
+		.carousel {
+			&-custom {
+				.owl-carousel {
+					.owl-nav {
+						button {
+							background: $red-contrast;
+						}
+					}
+				}
+				.owl-stage-outer {
+					.owl-stage {
+						.owl-item {
+							border-color: $red-contrast;
+
+							&:hover {
+								border-color: $red-contrast;
+							}
+							.carousel-slide-item {
+								border-color: $red-contrast;
+
+								a {
+									color: $red-contrast;
+								}
+							}
+						}
+					}
+				}
+				.owl-dots {
+					.owl-dot {
+						&.active {
+							background: $red-contrast !important;
+						}
+					}
+				}
+			}
+		}
+		.accordion {
+			.card {
+				&-header {
+					background: $red-contrast;
+				}
+			}
+		}
+		.social-media {
+			ul {
+				li {
+					a {
+						i {
+							color: $red-contrast;
+						}
+					}
+				}
+			}
+		}
+		table {
+			&:not(.table-condensed) {
+				thead {
+					tr {
+						th {
+							background: $red-contrast;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			li {
+				.page-link {
+					color: $red-contrast;
+
+					&:hover {
+						background: $red-contrast;
+					}
+				}
+				&.active {
+					.page-link {
+						background: $red-contrast;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:checked {
+				~ .custom-control-label {
+					color: $red-contrast;
+
+					&:after {
+						background: $red-contrast !important;
+					}
+				}
+			}
+		}
+		.stats {
+			.stat-box {
+				p {
+					strong {
+						color: $red-contrast;
+					}
+				}
+			}
+		}
+		.contextual-stat-box {
+			.desc {
+				p {
+					strong {
+						color: $red-contrast;
+					}
+				}
+			}
+		}
+		#Result {
+			.section-title {
+				h2,
+				p {
+					strong {
+						color: $red-contrast;
+					}
+				}
+			}
+		}
+		.filter {
+			.btn-search,
+			.input-group-append {
+				color: $red-contrast;
+			}
+		}
+		.datepicker {
+			em {
+				color: $red-contrast;
+			}
+		}
+		#EventTab {
+			.btn {
+				&.active {
+					background: $red-contrast;
+				}
+			}
+		}
+		.details {
+			> li {
+				&:before {
+					background: $red-contrast;
+				}
+			}
+		}
+		#Calendar {
+			.control {
+				a {
+					background: $red-contrast;
+				}
+			}
+		}
+		.calendar-list {
+			li {
+				.box {
+					background: $red-contrast;
+				}
+			}
+		}
+		.daterangepicker {
+			.ranges {
+				li {
+					&.active {
+						color: $red-contrast;
+					}
+				}
+			}
+			td {
+				&:not(.off) {
+					&.active {
+						background: $red-contrast;
+					}
+					&.in-range {
+						&.active {
+							background: $red-contrast;
+						}
+					}
+				}
+			}
+		}
+	}
 }
