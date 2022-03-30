@@ -14,7 +14,8 @@
 		<!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
   </head>
   <body class="orange"> <!-- orange|green|purple|blue|red -->
     <header id="Header">
@@ -35,7 +36,7 @@
                 <button type="submit" class="btn btn-search"><span class="far fa-search"></button>
               </div>
               <ul class="nav-utilities">
-                <li>
+                <!-- <li>
                   <a href="#"><em class="fab fa-facebook-f fa-facebook-f"></em></a>
                 </li>
                 <li>
@@ -43,9 +44,9 @@
                 </li>
                 <li>
                   <a href="#"><em class="fab fa-youtube"></em></a>
-                </li>
+                </li> -->
                 <li>
-                  <a class="btn btn-primary btn-lg" href="#">Easy Read <em class="fas fa-adjust"></em></a>
+                  <a class="contrast btn btn-primary btn-md" href="#">Easy Read <em class="fas fa-adjust"></em></a>
                 </li>
               </ul>
             </div>
@@ -86,14 +87,31 @@
     </header>
     <div id="Hero" class="section">
       <div class="video-wrapper">
-        <iframe style='position: absolute;  width: 100%; height: 100%; left: 0; top: 0;' src='https://killerplayer.com/start/video/3e810ae1-5a29-4123-8c28-708a8bf08b69' width='745' height='419' frameborder='0' scrolling='no' allowfullscreen></iframe>
-    </div>
+        <video
+          id="my-video"
+          class="video-js vjs-16-9"
+          preload="auto"
+          autoplay
+          muted
+          data-setup="{}"
+        >
+          <source src="https://griffith-theatre.gumlet.io/videos/AF_2021_BTS.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+              >supports HTML5 video</a
+            >
+          </p>
+        </video>
+        <a class="btn btn-primary btn-lg" href="#">Read More</a>
+      </div>
     </div>
     <div id="MainTiles" class="section">
       <div class="container-lg">
         <div class="section-title flex">
           <h2>What's On</h2>
-          <a class="btn btn-primary btn-lg" href="#">View More</a>
+          <a class="btn btn-primary" href="#">View More</a>
         </div>
         <div class="section-content">
           <ul class="performance-list">
@@ -139,7 +157,6 @@
                 </div>
               </a>
               <div class="performance-cta d-flex">
-                <a class="btn btn-primary" href="#">Notify me</a>
                 <a class="btn-details" href="#">View details</a>
               </div>
             </li>
@@ -155,7 +172,6 @@
                 </div>
               </a>
               <div class="performance-cta d-flex">
-                <a class="btn btn-primary" href="#">Notify me</a>
                 <a class="btn-details" href="#">View details</a>
               </div>
             </li>
@@ -241,7 +257,7 @@
           <li>
             <h3>Have a question?</h3>
             <p>Write the Box Office with your enquiry</p>
-            <a class="btn btn-primary btn-lg" href="#">Email us</a>
+            <a class="btn btn-primary" href="#">Email us</a>
           </li>
         </ul>
       </div>
@@ -263,7 +279,7 @@
                   <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
               </div>
-              <button type="submit" class="btn btn-ghost btn-lg">Sign me up</button>
+              <button type="submit" class="btn btn-ghost">Sign me up</button>
             </fieldset>
           </form>
         </div>
@@ -452,8 +468,8 @@
           </div>
         </div>        
       </div>
+      <a href="#" class="scrollTo" id="scrollTo"><em class="fas fa-chevron-up"></em></a>
     </footer>
-    <a href="#" class="scrollTo" id="scrollTo"><em class="fas fa-chevron-up"></em></a>
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4d958201f2.js" crossorigin="anonymous"></script>
@@ -463,6 +479,7 @@
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/video.min.js"></script>
 
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>

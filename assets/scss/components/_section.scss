@@ -47,6 +47,11 @@
 	padding-bottom: 0;
 	padding-top: 0;
 	margin-bottom: 0;
+
+  @media (min-width: $width-xl) {
+    height: calc(100vh - 7rem);
+    overflow: hidden;
+  }
 }
 #MainTiles {
 	margin-bottom: 0;

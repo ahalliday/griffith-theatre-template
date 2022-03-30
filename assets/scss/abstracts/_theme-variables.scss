@@ -268,11 +268,6 @@ $red-contrast: #cc0600; // Contrast
 			.owl-stage-outer {
 				.owl-stage {
 					.owl-item {
-						border-color: $orange;
-
-						&:hover {
-							border-color: $orange;
-						}
 						.carousel-slide-item {
 							border-color: $orange;
 
@@ -443,6 +438,13 @@ $red-contrast: #cc0600; // Contrast
 						background: $orange-shade;
 					}
 				}
+        &.empty {
+          background: $orange-tint;
+
+          span {
+            color: $orange-shade;
+          }
+        }
 			}
 		}
 	}
@@ -698,11 +700,6 @@ $red-contrast: #cc0600; // Contrast
 				.owl-stage-outer {
 					.owl-stage {
 						.owl-item {
-							border-color: $orange-contrast;
-
-							&:hover {
-								border-color: $orange-contrast;
-							}
 							.carousel-slide-item {
 								border-color: $orange-contrast;
 
@@ -1116,11 +1113,6 @@ $red-contrast: #cc0600; // Contrast
 			.owl-stage-outer {
 				.owl-stage {
 					.owl-item {
-						border-color: $green;
-
-						&:hover {
-							border-color: $green;
-						}
 						.carousel-slide-item {
 							border-color: $green;
 
@@ -1291,6 +1283,13 @@ $red-contrast: #cc0600; // Contrast
 						background: $green-shade;
 					}
 				}
+        &.empty {
+          background: $green-tint;
+
+          span {
+            color: $green-shade;
+          }
+        }
 			}
 		}
 	}
@@ -1545,20 +1544,13 @@ $red-contrast: #cc0600; // Contrast
 				}
 				.owl-stage-outer {
 					.owl-stage {
-						.owl-item {
-							border-color: $green-contrast;
+            .carousel-slide-item {
+              border-color: $green-contrast;
 
-							&:hover {
-								border-color: $green-contrast;
-							}
-							.carousel-slide-item {
-								border-color: $green-contrast;
-
-								a {
-									color: $green-contrast;
-								}
-							}
-						}
+              a {
+                color: $green-contrast;
+              }
+            }
 					}
 				}
 				.owl-dots {
@@ -1964,11 +1956,6 @@ $red-contrast: #cc0600; // Contrast
 			.owl-stage-outer {
 				.owl-stage {
 					.owl-item {
-						border-color: $purple;
-
-						&:hover {
-							border-color: $purple;
-						}
 						.carousel-slide-item {
 							border-color: $purple;
 
@@ -2139,6 +2126,13 @@ $red-contrast: #cc0600; // Contrast
 						background: $purple-shade;
 					}
 				}
+        &.empty {
+          background: $purple-tint;
+
+          span {
+            color: $purple-shade;
+          }
+        }
 			}
 		}
 	}
@@ -2394,11 +2388,6 @@ $red-contrast: #cc0600; // Contrast
 				.owl-stage-outer {
 					.owl-stage {
 						.owl-item {
-							border-color: $purple-contrast;
-
-							&:hover {
-								border-color: $purple-contrast;
-							}
 							.carousel-slide-item {
 								border-color: $purple-contrast;
 
@@ -2812,11 +2801,6 @@ $red-contrast: #cc0600; // Contrast
 			.owl-stage-outer {
 				.owl-stage {
 					.owl-item {
-						border-color: $blue;
-
-						&:hover {
-							border-color: $blue;
-						}
 						.carousel-slide-item {
 							border-color: $blue;
 
@@ -2987,6 +2971,13 @@ $red-contrast: #cc0600; // Contrast
 						background: $blue-shade;
 					}
 				}
+        &.empty {
+          background: $blue-tint;
+
+          span {
+            color: $blue-shade;
+          }
+        }
 			}
 		}
 	}
@@ -3242,11 +3233,6 @@ $red-contrast: #cc0600; // Contrast
 				.owl-stage-outer {
 					.owl-stage {
 						.owl-item {
-							border-color: $blue-contrast;
-
-							&:hover {
-								border-color: $blue-contrast;
-							}
 							.carousel-slide-item {
 								border-color: $blue-contrast;
 
@@ -3660,11 +3646,6 @@ $red-contrast: #cc0600; // Contrast
 			.owl-stage-outer {
 				.owl-stage {
 					.owl-item {
-						border-color: $red;
-
-						&:hover {
-							border-color: $red;
-						}
 						.carousel-slide-item {
 							border-color: $red;
 
@@ -3835,6 +3816,13 @@ $red-contrast: #cc0600; // Contrast
 						background: $red-shade;
 					}
 				}
+        &.empty {
+          background: $red-tint;
+
+          span {
+            color: $red-shade;
+          }
+        }
 			}
 		}
 	}
@@ -4090,11 +4078,6 @@ $red-contrast: #cc0600; // Contrast
 				.owl-stage-outer {
 					.owl-stage {
 						.owl-item {
-							border-color: $red-contrast;
-
-							&:hover {
-								border-color: $red-contrast;
-							}
 							.carousel-slide-item {
 								border-color: $red-contrast;
 

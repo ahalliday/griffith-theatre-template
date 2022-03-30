@@ -1,7 +1,24 @@
 #HeroCarousel {
+  @media (min-width: $width-xl) {
+    height: 100%;
+  }
+  .carousel-inner {
+    @media (min-width: $width-xl) {
+      height: 100%;
+    }
+  }
   .carousel-item {
+    @media (min-width: $width-xl) {
+      height: 100%;
+    }
     img {
       width: 100%;
+
+      @media (min-width: $width-xl) {
+        position:relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
     .btn {
       position:absolute;
@@ -131,7 +148,6 @@
 
         .owl-item {
           flex: 0 0 auto;
-          border: .0625rem solid transparent;
 
           &:not(.active) {
             padding-top: 0.625rem;
@@ -144,7 +160,6 @@
           }
 
           &:hover {
-            border: 1px solid transparent;
             border-radius: 0.25rem;
 
             @media (min-width: $width-md) {
