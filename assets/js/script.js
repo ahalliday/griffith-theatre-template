@@ -88,4 +88,14 @@ $(function () {
   }, cb);
 
   cb(start, end);
+
+  // Square Event Calendar with Dynamic Width
+  var $box = $('.calendar-list .box');// The element to measure
+  var boxWidth = $box.outerWidth();// Get its width    
+  $box.outerHeight(boxWidth); // Set width value on element's height
+  
+  $(window).resize(function() {
+      boxWidth = $box.outerWidth();// Re-get the width
+      $box.outerHeight(boxWidth);// Re-update element height
+  });
 });
