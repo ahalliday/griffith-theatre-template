@@ -33,9 +33,15 @@
 			max-width: 25%;
 			flex: 1 1 25%;
 		}
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
 		img {
 			width: 100%;
 			max-width: none;
+      transition: .4s;
 		}
 		.performance-caption {
 			padding: 1rem;
@@ -72,6 +78,7 @@
 					padding: 1.25rem 0;
 					text-align: center;
 					display: block;
+          transition: .4s;
 
 					strong {
 						border-top: 0.25rem solid transparent;
@@ -86,6 +93,13 @@
 					}
 				}
 			}
+      &:hover {
+        .img {
+          .status {
+            transform: translateY(-50%) scale(1.05);
+          }
+        }
+      }
 		}
 	}
 	.performance-cta {
