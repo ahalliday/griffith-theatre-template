@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Griffith Regional Theatre | Event</title>
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon.svg">
+
+    <!-- Styles -->
+    <link href="assets/css/styles.min.css" rel="stylesheet">
+		
+		<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body class="orange"> <!-- orange|green|purple|blue|red -->
+    <header id="Header">
+      <nav class="navbar navbar-light" id="NavBar">
+        <div class="container-lg">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="#" class="navbar-brand">
+            <img alt="Griffith Regional Thearte" src="images/logo.svg">
+          </a>
+          <button type="button" class="navbar-toggler">
+            <span class="nav-open fal fa-bars"></span>
+            <span class="nav-close fal fa-times"></span>
+          </button>
+          <div id="Nav">
+            <div class="nav-top">
+              <div class="search">
+                <input type="text" class="form-control" aria-describedby="searchText" placeholder="Search">
+                <button type="submit" class="btn btn-search"><span class="far fa-search"></button>
+              </div>
+              <ul class="nav-utilities">
+                <!-- <li>
+                  <a href="#"><em class="fab fa-facebook-f fa-facebook-f"></em></a>
+                </li>
+                <li>
+                  <a href="#"><em class="fab fa-twitter"></em></a>
+                </li>
+                <li>
+                  <a href="#"><em class="fab fa-youtube"></em></a>
+                </li> -->
+                <li>
+                  <a class="contrast btn btn-primary btn-md" href="#">Easy Read <em class="fas fa-adjust"></em></a>
+                </li>
+              </ul>
+            </div>
+            <ul class="nav-list">
+              <li class="active"><a href="#">What's On</a></li>
+              <li class="dropdown">
+                <a href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Your visit <em class="fas fa-angle-down"></em>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul>
+                    <li><a href="#">Scenic Curtain</a></li>
+                    <li><a href="#">Access & Accessibility</a></li>
+                    <li class="active"><a href="#">Patron Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Theatre Ettiquette</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">Education</a></li>
+              <li class="dropdown">
+                <a href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Venue Hire <em class="fas fa-angle-down"></em>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul>
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Artspace</a></li>
+            </ul>
+          </div>  
+        </div>  
+      </nav>
+    </header>
+    <div id="Hero" class="section">
+      <div id="HeroCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#HeroCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#HeroCarousel" data-slide-to="1"></li>
+          <li data-target="#HeroCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <picture>
+              <source media="(max-width:31.25rem)" srcset="images/slide1-mobile.jpg">
+              <img src="images/slide1.jpg" alt="Sydney Comedy Festival">
+            </picture> 
+            <a class="btn btn-primary" href="#">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source media="(max-width:31.25rem)" srcset="images/slide2-mobile.jpg">
+              <img src="images/slide2.jpg" alt="Sydney Comedy Festival">
+            </picture>
+            <a class="btn btn-primary" href="#">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source media="(max-width:31.25rem)" srcset="images/slide3-mobile.jpg">
+              <img src="images/slide3.jpg" alt="Sydney Comedy Festival">
+            </picture>
+            <a class="btn btn-primary" href="#">Read More</a>
+          </div>
+        </div>
+        <a class="carousel-control carousel-control-prev" href="#HeroCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control carousel-control-next" href="#HeroCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div id="Event" class="section">
+      <div class="filter">
+        <form>
+          <fieldset>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <label>Search Show</label>
+                <div class="search">
+                  <input type="text" class="form-control" aria-describedby="firstname" placeholder="First Name">
+                  <button type="submit" class="btn btn-search"><span class="far fa-search"></button>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label>Search Date</label>
+                <div class="datepicker date">
+                  <span>Search date</span>
+                  <em class="far fa-calendar"></em>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="container-lg">
+        <ul class="nav nav-tabs" id="EventTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="btn btn-lg active" id="upcoming-tab" data-toggle="tab" href="#upcoming" role="tab" aria-controls="upcoming" aria-selected="false">Upcoming show</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="btn btn-lg" id="calendar-tab" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="true">Calendar view</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade  show active" id="upcoming" role="tabpanel" aria-labelledby="upcoming-tab">
+            <ul class="event-list">
+              <li>
+                <div class="img">
+                  <div class="img-wrapper">
+                    <img src="images/the-wharf-revue.jpg" alt="The wharf revue: Can of worms">
+                  </div>
+                </div>
+                <div class="text">
+                  <h4><a href="#">The wharf revue: Can of worms</a></h4>
+                  <h6>Saturday  |  12 February 2022  |  8:00 PM</h6>
+                  <ul class="tags">
+                    <li>
+                      <strong>Season</strong></li>
+                    <li><strong>Members bring a friend for free</strong></li>
+                  </ul>
+                  <p>The team have baited their hooks and are opening another can of worms to bring us laughs with their razor sharp political satire.</p>
+                  <!-- <ul class="details">
+                    <li>Advance (before 5pm Fri 28 Jan) $40</li>
+                    <li>Member: $35</li>
+                    <li>Adult: $50</li>
+                    <li>Concession: $45</li>
+                    <li>Children: $30</li>
+                  </ul> -->
+                  <div class="btn-block">
+                    <a class="btn btn-primary" href="#">Book Tickets</a>
+                    <a class="btn btn-secondary" href="#">More Info</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="img">
+                  <div class="img-wrapper">
+                    <img src="images/amphibian.jpg" alt="Amphibian">
+                  </div>
+                </div>
+                <div class="text">
+                  <h4><a href="#">Amphibian</a></h4>
+                  <h6>Saturday  |  12 February 2022  |  8:00 PM</h6>
+                  <ul class="tags">
+                    <li>
+                      <strong>Season</strong></li>
+                    <li><strong>Members bring a friend for free</strong></li>
+                  </ul>
+                  <p>A young boy flees Afghanistan for the chance at a better life - an epic story of displacement, loss and adapting to different worlds.</p>
+                  <!-- <ul class="details">
+                    <li>Advance (before 5pm Tue 15 Feb) $40</li>
+                    <li>Member: $35</li>
+                    <li>Adult: $50</li>
+                    <li>Concession: $45</li>
+                    <li>Children: $30</li>
+                    <li>Members bring a friend for FREE (please book through the Box Office)</li>
+                  </ul> -->
+                  <div class="btn-block">
+                    <a class="btn btn-primary" href="#">Book Tickets</a>
+                    <a class="btn btn-secondary" href="#">More Info</a>
+                  </div>
+                </div>
+              </li>
+              <li class="with-overlay">
+                <div class="img">
+                  <div class="img-wrapper">
+                    <img src="images/awkward.jpg" alt="Awkward">
+                    <div class="status"><strong>Postponed</strong></div>
+                  </div>
+                </div>
+                <div class="text">
+                  <h4><a href="#">Awkward</a></h4>
+                  <h6>Postponed Date TBA</h6>
+                  <ul class="tags">
+                    <li>
+                      <strong>Season</strong></li>
+                    <li><strong>Members bring a friend for free</strong></li>
+                  </ul>
+                  <p>A chance to go to the theatre and feel better than when you went in… Come to the party! The wit and wisdom of the socially awkward - a bunch of characters with distinctive personalities meet for the first time. What can go wrong!</p>
+                  <!-- <ul class="details">
+                    <li>Advance (before 5pm Tue 15 Feb) $40</li>
+                    <li>Member: $35</li>
+                    <li>Adult: $50</li>
+                    <li>Concession: $45</li>
+                    <li>Children: $30</li>
+                    <li>Members bring a friend for FREE (please book through the Box Office)</li>
+                  </ul> -->
+                  <div class="btn-block">
+                    <a class="btn btn-secondary" href="#">More Info</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="img">
+                  <div class="img-wrapper">
+                    <img src="images/leaving-jackson.jpg" alt="Leaving Jackson">
+                  </div>
+                </div>
+                <div class="text">
+                  <h4><a href="#">Leaving Jackson</a></h4>
+                  <h6>Saturday  |  12 February 2022  |  8:00 PM</h6>
+                  <ul class="tags">
+                    <li>
+                      <strong>Selling fast</strong></li>
+                    <li><strong>Members bring a friend for free</strong></li>
+                  </ul>
+                  <p>Take a step back in time to when country music told a true story of life, love and heartache. From the famous Walk The Line and Folsom Prison Blues to the iconic Ring of Fire.</p>
+                  <!-- <ul class="details">
+                    <li>Advance (before 5pm Tue 15 Feb) $40</li>
+                    <li>Member: $35</li>
+                    <li>Adult: $50</li>
+                    <li>Concession: $45</li>
+                    <li>Children: $30</li>
+                    <li>Please note all tickets will incur $1.50 per ticket processing fee</li>
+                  </ul> -->
+                  <div class="btn-block">
+                    <a class="btn btn-primary" href="#">Book Tickets</a>
+                    <a class="btn btn-secondary" href="#">More Info</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">
+                    <i class="far fa-angle-left"></i>
+                  </a>
+                </li>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">
+                    <i class="far fa-angle-double-left"></i>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item">
+                  <a href="#" class="page-link">6</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="far fa-angle-right"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="far fa-angle-double-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav> -->
+          </div>
+
+          <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+            <div id="Calendar" class="carousel slide" data-ride="carousel" data-interval="0">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h2>February 2022</h2>
+                  <ul class="calendar-list">
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>1 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Repeat Every Month</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>2 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>3 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>4 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>5 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>6 <small>Feb</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>7 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>8 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>9 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>10 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>11 <small>Feb</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>12 <small>Feb</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>13 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>14 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Repeat Every Month</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>15 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>16 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>17 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">    
+                        <div class="date">
+                          <h6>18 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>19 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>20 <small>Feb</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>21 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>22 <small>Feb</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>23 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>24 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>25 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Multi Day Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>26 <small>Feb</small></h6>
+                          <h6>28 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Multi Day Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>27 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>28 <small>Feb</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Span Across Months</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item">
+                  <h2>March 2022</h2>
+                  <ul class="calendar-list">
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>1 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Span Across Months</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>2 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>3 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>4 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>5 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div href="#" class="box empty">               
+                        <div class="date">
+                          <h6>6 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>7 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>8 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>9 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>10 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>11 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>12 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>13 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>14 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Repeat Every Month</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>15 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>16 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>17 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>18 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>19 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>20 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>21 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>22 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>23 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Single Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box cancelled">               
+                        <div class="date">
+                          <h6>24 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <span class="badge">Cancelled</span>
+                          <h4>Cancelled Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>25 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Multi Day Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>26 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Multi Day Event</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>27 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>28 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Span Across Months</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="box image" style="background-image: url(images/amphibian.jpg)">               
+                        <div class="date">
+                          <h6>29 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event with Featured Image</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="box empty">               
+                        <div class="date">
+                          <h6>30 <small>Mar</small></h6>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="box">              
+                        <div class="date">
+                          <h6>31 <small>Mar</small></h6>
+                        </div>
+                        <div class="event-info">
+                          <h4>Event That Span Across Months</h4>
+                          <p><span class="fal fa-clock"></span> 4PM - 10PM</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="control">
+                <a class="carousel-control carousel-control-prev" href="#Calendar" role="button" data-slide="prev">
+                  <span class="fal fa-angle-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control carousel-control-next" href="#Calendar" role="button" data-slide="next">
+                  <span class="fal fa-angle-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Subscribe" class="section">
+      <div class="container-lg">
+        <div class="section-content text-center">
+          <h3>Subscribe to us <small>and get the latest news, events and special offers from us</small></h3>
+          <form>
+            <fieldset>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <input type="text" class="form-control" aria-describedby="firstname" placeholder="First Name">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <input type="text" class="form-control" aria-describedby="lastname" placeholder="Lastname">
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-ghost">Sign me up</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="Partners" class="section">
+      <div class="container-lg">
+        <div class="section-title">
+          <h2>Our Theatre Partners</h2>
+        </div>
+        <div class="section-content">
+          <ul class="partners text-center">
+            <li>
+              <img src="images/gcv.png" alt="Griffith City Volkswagen">
+              <img src="images/gcv2.jpg" alt="Griffith City Volkswagen">
+              <h3>Griffith City Volkswagen</h3>
+              <p>In the market for a new car? The only way to truly appreciate a Volkswagen is to experience one for yourself, book a test drive today!</p>
+            </li>
+            <li>
+              <img src="images/cfw.png" alt="Calabria Family Wines">
+              <img src="images/cfw2.jpg" alt="Calabria Family Wines">
+              <h3>Calabria Family Wines</h3>
+              <p>Enjoy some beautiful wines, visit their Tuscan-style cellar door, offering warm italian hospitality and a suite of new tasting experiences.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="Logos" class="section">
+      <div class="container-lg">
+        <div class="section-title">
+          <h5>Griffith City Council Websites</h5>
+        </div>
+        <div class="section-content">
+          <ul class="logos d-flex">
+            <li>
+              <a href="#">
+                <img src="images/logo-gcc.png" alt="Griffith City Council">
+                <h6>Griffith City Council</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-gm.png" alt="Griffith Pioneer Park Museum">
+                <h6>Museum</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-glc.png" alt="Griffith Leisure Centre">
+                <h6>Leisure Centre</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-grt.png" alt="Griffith Regional Theatre">
+                <h6>Theatre</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-grag.png" alt="Griffith Regional Art Gallery">
+                <h6>Gallery</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-gwrl.png" alt="Griffith Western Riverina Libraries">
+                <h6>Library</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/logo-vg.png" alt="Visit Griffith">
+                <h6>Visit Griffith</h6>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+    <footer id="Footer">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <a class="footer-logo" href="#">
+              <img src="images/logo-footer.svg" alt="Griffith Regional Theatre">
+            </a>
+            <p>This is the official website of Griffith Regional Theatre</p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>Opening hours</h6>
+            <p>Monday to Friday<br>10am to 5am</p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>Contact</h6>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:theatre@griffith.nsw.gov.au">
+                  <em class="fal fa-envelope"></em> theatre@griffith.nsw.gov.au
+                </a>
+              </li>
+              <li>
+                <a href="tel:02 6962 8444">
+                  <em class="fal fa-phone-flip"></em> 02 6962 8444
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <em class="fal fa-location-dot"></em>  Neville Place Griffith NSW 2680
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>Social Media</h6>
+            <ul class="sm d-inline-flex">
+              <li><a href="#"><em class="fab fa-facebook-f"></em></a></li>
+              <li><a href="#"><em class="fab fa-twitter"></em></a></li>
+              <li><a href="#"><em class="fab fa-youtube"></em></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="btm">
+        <div class="container-lg">
+          <div class="d-md-flex justify-content-between">
+            <ul>
+              <li><a href="#">Disclaimer & Copyright</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+            <p>©2022 - Griffith Regional Theatre  |   All right reserved</p>
+          </div>
+        </div>        
+      </div>
+      <a href="#" class="scrollTo" id="scrollTo"><em class="fas fa-chevron-up"></em></a>
+    </footer>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4d958201f2.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/daterangepicker.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
