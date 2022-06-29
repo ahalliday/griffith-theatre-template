@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
   $('.navbar-toggler').click(function () {
     $('body').toggleClass('show-mbl-menu');
   });
@@ -93,9 +93,11 @@ $(function () {
   var $box = $('.calendar-list .box');// The element to measure
   var boxWidth = $box.outerWidth();// Get its width    
   $box.outerHeight(boxWidth); // Set width value on element's height
-  
-  $(window).resize(function() {
+
+  $('#EventTab a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+    if(event.target) {
       boxWidth = $box.outerWidth();// Re-get the width
       $box.outerHeight(boxWidth);// Re-update element height
-  });
+    }
+  })
 });
