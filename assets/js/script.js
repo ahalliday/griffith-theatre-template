@@ -100,4 +100,27 @@ $(document).ready(function () {
       $box.outerHeight(boxWidth);// Re-update element height
     }
   })
+  if($('.search-label').length > 0) {
+    var now = start.format('MMM D, YYYY')
+    $('.search-label h6 span').text(now);
+  };
+
+    var momentStartDate = moment(start).format('YYYY-MM-DD');
+    var momentEndDate = moment(end).format('YYYY-MM-DD');
+
+    if(momentStartDate === moment().format('YYYY-MM-DD') && momentEndDate === moment().format('YYYY-MM-DD')) {
+      $(".datepicker span").text('Today');
+    } 
+
+    if($('#Event').length > 0) {
+      $('#Event form .btn').on('click', function(e) {
+        e.preventDefault();
+        var dateLabel = $('.datepicker span').text();
+        console.log('dateLabel ', dateLabel);
+        $(document).find('.search-label h6 span').text(dateLabel);
+      })
+    }
+
+
+
 });
