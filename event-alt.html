@@ -126,18 +126,24 @@
     </div>
     <div id="Event" class="section">
       <div class="filter">
-        <form>
+        <form action="" method="get">
           <fieldset>
             <div class="row">
               <div class="col-12 col-sm-6">
                 <label>Search Show</label>
                 <div class="search">
-                  <input type="text" class="form-control" aria-describedby="firstname" placeholder="First Name">
+                  <input type="text" class="form-control" aria-describedby="" placeholder="" id="calsrch" name="calsrch" value="">
                   <button type="button" class="btn btn-search"><span class="far fa-search"></button>
                 </div>
               </div>
               <div class="col-12 col-sm-6">
                 <label>Search Date</label>
+
+                <input id="date_from_front" name="date_from_front" type="hidden">
+                <input id="date_to_front" name="date_to_front" type="hidden">
+                <input id="cal" name="cal" value="" type="hidden">
+                <input type="hidden" name="daterange"  id="daterange" value=""/>
+
                 <div class="datepicker date">
                   <span>Search date</span>
                   <em class="far fa-calendar"></em>
