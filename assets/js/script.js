@@ -65,29 +65,39 @@ $(document).ready(function () {
     });
   });
 
-  // Date Range Picker
+  // // Date Range Picker
 
-  var start = moment();
-  var end = moment();
+  // var start = moment();
+  // var end = moment();
 
-  function cb(start, end) {
-    $('.datepicker span').html(start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY'));
-  }
+  // function cb(start, end) {
 
-  $('.datepicker').daterangepicker({
-    startDate: start,
-    endDate: end,
-    ranges: {
-      'Today': [moment(), moment()],
-      'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-      'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-      'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-      'This Month': [moment().startOf('month'), moment().endOf('month')],
-      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-    }
-  }, cb);
+  //   var momentStartDate = moment(start).format('YYYY-MM-DD');
+  //   var momentEndDate = moment(end).format('YYYY-MM-DD');
 
-  cb(start, end);
+  //   $('.datepicker span').html(start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY'));
+
+  //   if(momentStartDate === moment().format('YYYY-MM-DD') && momentEndDate === moment().format('YYYY-MM-DD')) {
+  //     $(".datepicker span").text('Today');
+  //   } else if(momentStartDate === moment().subtract(1, 'days').format('YYYY-MM-DD') && momentEndDate === moment().subtract(1, 'days').format('YYYY-MM-DD')) {
+  //     $(".datepicker span").text('Yesterday');
+  //   }
+  // }
+
+  // $('.datepicker').daterangepicker({
+  //   startDate: start,
+  //   endDate: end,
+  //   ranges: {
+  //     'Today': [moment(), moment()],
+  //     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+  //     'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+  //     'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+  //     'This Month': [moment().startOf('month'), moment().endOf('month')],
+  //     'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+  //   }
+  // }, cb);
+
+  // cb(start, end);
 
   // Square Event Calendar with Dynamic Width
   var $box = $('.calendar-list .box');// The element to measure
@@ -100,27 +110,6 @@ $(document).ready(function () {
       $box.outerHeight(boxWidth);// Re-update element height
     }
   })
-  if($('.search-label').length > 0) {
-    var now = start.format('MMM D, YYYY')
-    $('.search-label h6 span').text(now);
-  };
-
-    var momentStartDate = moment(start).format('YYYY-MM-DD');
-    var momentEndDate = moment(end).format('YYYY-MM-DD');
-
-    if(momentStartDate === moment().format('YYYY-MM-DD') && momentEndDate === moment().format('YYYY-MM-DD')) {
-      $(".datepicker span").text('Today');
-    } 
-
-    if($('#Event').length > 0) {
-      $('#Event form .btn').on('click', function(e) {
-        e.preventDefault();
-        var dateLabel = $('.datepicker span').text();
-        console.log('dateLabel ', dateLabel);
-        $(document).find('.search-label h6 span').text(dateLabel);
-      })
-    }
-
 
 
 });

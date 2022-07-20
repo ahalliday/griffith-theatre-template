@@ -126,17 +126,16 @@
     </div>
     <div id="Event" class="section">
       <div class="filter">
-        <form action="" method="get">
+        <form action="" method="GET">
           <fieldset>
             <div class="row">
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-5">
                 <label>Search Show</label>
                 <div class="search">
                   <input type="text" class="form-control" aria-describedby="" placeholder="" id="calsrch" name="calsrch" value="">
-                  <button type="button" class="btn btn-search"><span class="far fa-search"></button>
                 </div>
               </div>
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-5">
                 <label>Search Date</label>
 
                 <input id="date_from_front" name="date_from_front" type="hidden">
@@ -148,6 +147,13 @@
                   <span>Search date</span>
                   <em class="far fa-calendar"></em>
                 </div>
+              </div>
+              <div class="col-12 col-sm-2">
+                <label style="color: transparent">Search</label>
+                <button type="submit" class="orange btn btn-search  btn-primary">
+                  <span class="far fa-search"></span>
+                  Search Events
+                </button>
               </div>
             </div>
           </fieldset>
@@ -1130,5 +1136,196 @@
 
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+    <script>
+        $(function() {
+          var start = moment();
+          var end = moment();
+          var today = moment().format('MMM D, YYYY');
+          var yesterday = moment().subtract(1, 'days').format('MMM D, YYYY');
+          var last7Days =moment().subtract(6, 'days').format('MMM D, YYYY');
+          var last30Days =moment().subtract(30, 'days').format('MMM D, YYYY');
+
+          function cb(start, end) {    
+           
+            if (start.format('MMM D, YYYY') == today) {
+              $(".datepicker  span").text('Today');
+              $('#daterange').val(moment().format('YYYY-MM-DD'));
+
+              $('#date_from_front').val(moment().format('YYYY-MM-DD'));
+              $('#date_to_front').val(moment().format('YYYY-MM-DD'));
+
+            } else if (start.format('MMM D, YYYY') == yesterday) {
+              $(".datepicker  span").text('Yesterday');
+              $('#daterange').val(moment().subtract(1, 'days').format('YYYY-MM-DD'));
+              
+              $('#date_from_front').val( moment().subtract(1, 'days').format('YYYY-MM-DD'));
+              $('#date_to_front').val( moment().subtract(1, 'days').format('YYYY-MM-DD'));
+
+            } else if (start.format('MMM D, YYYY') == last7Days) {
+              $('.datepicker span').html(start.format('MMM D, YYYY') +' - ' +  end.format('MMM D, YYYY') );
+              $('#daterange').val(start.format('YYYY-MM-DD')+'-'+end.format('YYYY-MM-DD'));
+
+              
+              $('#date_from_front').val(start.format('YYYY-MM-DD'));
+              $('#date_to_front').val(end.format('YYYY-MM-DD'));
+
+            } else {
+
+              $(".datepicker span").html(start.format('MMM D, YYYY')+'-'+ end.format('MMM D, YYYY'));
+              $('#daterange').val(start.format('YYYY-MM-DD')+'-'+end.format('YYYY-MM-DD'));
+
+              $('#date_from_front').val(start.format('YYYY-MM-DD'));
+              $('#date_to_front').val(end.format('YYYY-MM-DD'));
+            }
+
+          }
+          $('.datepicker').daterangepicker({
+            startDate: start,
+            endDate: end,
+            "locale": {
+              "format": "MMM D, YYYY",
+              "separator": " - ",
+              "applyLabel": "Apply date range",
+              "cancelLabel": "Cancel",
+              "fromLabel": "From",
+              "toLabel": "To",
+              "customRangeLabel": "Custom",
+              "weekLabel": "W",
+              "daysOfWeek": [
+                  "Sun",
+                  "Mon", 
+                  "Tue",
+                  "Wed",
+                  "Thu",
+                  "Fri",
+                  "Sat"
+              ],
+              "monthNames": [
+                  "January",
+                  "February",
+                  "March",
+                  "April",
+                  "May",
+                  "June",
+                  "July",
+                  "August",
+                  "September",
+                  "October",
+                  "November",
+                  "December"
+              ],
+              "firstDay": 1,
+            },
+            ranges: {
+              'Today': [moment(), moment()],
+              'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+              'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+              'This Month': [moment().startOf('month'), moment().endOf('month')],
+              'Next Month': [moment().add(1, 'month').startOf('month'), moment().add(1, 'month').endOf('month')]
+            }
+          }, cb);
+
+          cb(start, end);
+
+          if($('.search-label').length > 0) {
+            var now = start.format('MMM D, YYYY')
+            $('.search-label h6 span').text(now);
+          };
+        });
+
+
+        function GetURLParameter(sParam)
+          {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++){
+              var sParameterName = sURLVariables[i].split('=');
+              if (sParameterName[0] == sParam){
+                return sParameterName[1];
+              }
+            }
+          }
+
+        $(document).ready(function() {
+          var startDate = GetURLParameter("date_from_front");
+          var endDate = GetURLParameter("date_to_front")
+          var momentStartDate = moment(startDate).format('YYYY-MM-DD');
+          var momentEndDate = moment(endDate).format('YYYY-MM-DD');
+
+          if(momentStartDate === moment().format('YYYY-MM-DD') && momentEndDate === moment().format('YYYY-MM-DD')) {
+
+            $('.search-label h6 span').text('Today');
+
+            $(".datepicker span").text('Today');
+    
+            $('#date_from_front').val(moment().format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment().format('YYYY-MM-DD'));
+            $('#daterange').val(moment().format('YYYY-MM-DD'));
+
+          } else if(momentStartDate === moment().subtract(1, 'days').format('YYYY-MM-DD') && momentEndDate === moment().subtract(1, 'days').format('YYYY-MM-DD')) {
+
+            $('.search-label h6 span').text( moment().subtract(1, 'days').format('YYYY-MM-DD'));
+
+            $(".datepicker span").text('Yesterday');
+    
+            $('#date_from_front').val( moment().subtract(1, 'days').format('YYYY-MM-DD'));
+            $('#date_to_front').val( moment().subtract(1, 'days').format('YYYY-MM-DD'));
+            $('#daterange').val( moment().subtract(1, 'days').format('YYYY-MM-DD') +'-' +  moment().subtract(1, 'days').format('YYYY-MM-DD'));
+
+          } else if( momentStartDate === moment().subtract(6, 'days').format('YYYY-MM-DD')  && momentEndDate === moment().format('YYYY-MM-DD')) {
+            $('.search-label h6 span').html(moment().subtract(6, 'days').format('MMM D, YYYY')+' - '+ moment().format('MMM D, YYYY'));
+
+            $(".datepicker span").html(moment().subtract(6, 'days').format('MMM D, YYYY')+' - '+ moment().format('MMM D, YYYY'));
+
+            $('#date_from_front').val(moment(startDate).format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment(endDate).format('YYYY-MM-DD'));
+
+            $('#daterange').val( startDate +'-' +  endDate);
+
+          }  else if( momentStartDate === moment().subtract(1, 'month').startOf('month').format('YYYY-MM-DD')  && momentEndDate === moment().subtract(1, 'month').endOf('month').format('YYYY-MM-DD')) {
+            $('.search-label h6 span').html( moment().subtract(1, 'month').startOf('month').format('MMM DD, YYYY') +' - ' +  moment().subtract(1, 'month').endOf('month').format('MMM DD, YYYY'));
+
+            $(".datepicker span").html( moment().subtract(1, 'month').startOf('month').format('MMM DD, YYYY') +' - ' +  moment().subtract(1, 'month').endOf('month').format('MMM DD, YYYY'));
+
+            $('#date_from_front').val(moment().subtract(1, 'month').startOf('month').format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment().subtract(1, 'month').endOf('month').format('YYYY-MM-DD'));
+
+            $('#daterange').val( moment().subtract(1, 'month').startOf('month').format('YYYY-MM-DD') +'-' +  moment().subtract(1, 'month').endOf('month').format('YYYY-MM-DD'));
+
+          } else if(momentStartDate === moment().startOf('month').format('YYYY-MM-DD') && momentEndDate === moment().endOf('month').format('YYYY-MM-DD')) {
+
+            $('.search-label h6 span').html( moment().startOf('month').format('MMM DD, YYYY') +' - ' +  moment().endOf('month').format('MMM DD, YYYY'));
+
+            $(".datepicker span").html( moment().startOf('month').format('MMM DD, YYYY') +' - ' +  moment().endOf('month').format('MMM DD, YYYY'));
+
+            $('#date_from_front').val(moment().startOf('month').format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment().endOf('month').format('YYYY-MM-DD'));
+
+            $('#daterange').val( startDate +'-' +  endDate);
+          }
+          else if(momentStartDate === moment().add(1,'month').startOf('month').format('YYYY-MM-DD') && momentEndDate === moment().add(1, 'month').endOf('month').format('YYYY-MM-DD')) {
+
+            $('.search-label h6 span').html( moment().add(1, 'month').startOf('month').format('MMM DD, YYYY') +' - ' +  moment().add(1, 'month').endOf('month').format('MMM DD, YYYY'));
+
+            $(".datepicker span").html( moment().add(1, 'month').startOf('month').format('MMM DD, YYYY') +' - ' +  moment().add(1, 'month').endOf('month').format('MMM DD, YYYY'));
+
+            $('#date_from_front').val(moment().add(1, 'month').startOf('month').format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment().add(1, 'month').endOf('month').format('YYYY-MM-DD'));
+
+            $('#daterange').val( moment().add(1, 'month').startOf('month').format('YYYY-MM-DD') +'-' +  moment().add(1, 'month').endOf('month').format('YYYY-MM-DD'));
+          
+          } else {
+            $('.search-label h6 span').html(moment(startDate).format('MMM D, YYYY') +' - ' + moment(endDate).format('MMM D, YYYY'));
+            $(".datepicker span").html(moment(startDate).format('MMM D, YYYY') +' - ' + moment(endDate).format('MMM D, YYYY'));
+
+            $('#date_from_front').val(moment(startDate).format('YYYY-MM-DD'));
+            $('#date_to_front').val(moment(endDate).format('YYYY-MM-DD'));
+
+            $('#daterange').val(moment(startDate).format('YYYY-MM-DD')  + ' - ' + moment(endDate).format('YYYY-MM-DD'));
+            
+          }
+        })
+    </script>
   </body>
 </html>
