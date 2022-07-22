@@ -280,6 +280,25 @@
 			}
 		}
 	}
+
+	&.logo-supporters {
+		@media (min-width: $width-lg) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		li {
+			@media (min-width: $width-lg) {
+				flex: 1 0 25%;
+				max-width: 25%;
+			}
+
+			a {
+				@media (min-width: $width-lg) {
+					max-width: 10rem;
+				}
+			}
+		}
+	}
 }
 .search-result {
 	margin: 0;
