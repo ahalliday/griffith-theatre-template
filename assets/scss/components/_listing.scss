@@ -455,6 +455,22 @@
 				}
 			}
 		}
+		.img-wrapper {
+			img {
+				&.desktop {
+					display: none;
+
+					@media (min-width: 48rem) {
+						display: block;
+					}
+				}
+				&.mobile {
+					@media (min-width: 48rem) {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
 .tags {
