@@ -1,0 +1,54 @@
+.custom-modal {
+    background: $black;
+   
+    .modal-dialog {
+        position: static;
+
+        @media (min-width: 62rem) {
+            max-width: 50rem;
+        }
+    }
+
+    .modal-content {
+        background: transparent;
+        border: none;
+        position: static;
+        padding-top: 6.25rem;
+
+        .modal-header {
+            border: none;
+            padding: 0;
+
+            button {
+                color: $white;
+                text-shadow: none;
+                opacity: 1;
+                font-size:2.5rem;
+                position: absolute;
+                right: 1.875rem;
+                top: 1.875rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                span {
+                    color: $white;
+                    font-size:2.5rem;
+                }
+            }
+        }
+        .modal-body {
+            text-align: center;
+
+           p {
+            color: $white;
+
+            @media (min-width: 62rem) {
+                font-size: 1.5625rem;
+                line-height: 2.1875rem;
+            }
+           }
+        }
+    }
+}
