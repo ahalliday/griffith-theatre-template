@@ -1174,14 +1174,16 @@
           var last7Days =moment().subtract(6, 'days').format('MMM D, YYYY');
           var last30Days =moment().subtract(30, 'days').format('MMM D, YYYY');
 
+          var next90Days =moment().add(90, 'days').format('MMM D, YYYY');
+
           function cb(start, end) {    
            
             if (start.format('MMM D, YYYY') == today) {
-              $(".datepicker  span").text('Today');
-              $('#daterange').val(moment().format('YYYY-MM-DD'));
+              $(".datepicker  span").text('Next 90 Days');
+              $('#daterange').val(moment().format('YYYY-MM-DD'), moment().add(90, 'days').format('YYYY-MM-DD'));
 
               $('#date_from_front').val(moment().format('YYYY-MM-DD'));
-              $('#date_to_front').val(moment().format('YYYY-MM-DD'));
+              $('#date_to_front').val(moment().add(90, 'days').format('YYYY-MM-DD'));
 
             } else if (start.format('MMM D, YYYY') == yesterday) {
               $(".datepicker  span").text('Yesterday');
@@ -1246,7 +1248,7 @@
               "firstDay": 1,
             },
             ranges: {
-              'Today': [moment(), moment()],
+              'Next 90 Days': [moment(), moment()],
               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
@@ -1281,16 +1283,17 @@
           var endDate = GetURLParameter("date_to_front")
           var momentStartDate = moment(startDate).format('YYYY-MM-DD');
           var momentEndDate = moment(endDate).format('YYYY-MM-DD');
+          var next90Days = moment().add(90, 'days').format('YYYY-MM-DD');
 
-          if(momentStartDate === moment().format('YYYY-MM-DD') && momentEndDate === moment().format('YYYY-MM-DD')) {
+          if(momentStartDate === moment().format('YYYY-MM-DD') && next90Days) {
+            console.log('sdsdsd')
+            $('.search-label h6 span').text('Next 90 Days');
 
-            $('.search-label h6 span').text('Today');
-
-            $(".datepicker span").text('Today');
+            $(".datepicker span").text('Next 90 Days');
     
             $('#date_from_front').val(moment().format('YYYY-MM-DD'));
-            $('#date_to_front').val(moment().format('YYYY-MM-DD'));
-            $('#daterange').val(moment().format('YYYY-MM-DD'));
+            $('#date_to_front').val(next90Days);
+            $('#daterange').val(moment().format('YYYY-MM-DD') +'-'+next90Days);
 
           } else if(momentStartDate === moment().subtract(1, 'days').format('YYYY-MM-DD') && momentEndDate === moment().subtract(1, 'days').format('YYYY-MM-DD')) {
 
