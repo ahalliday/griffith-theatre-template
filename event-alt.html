@@ -1178,8 +1178,7 @@
           var next90Days =moment().add(90, 'days').format('MMM D, YYYY');
 
           function cb(start, end) {    
-           
-            if (start.format('MMM D, YYYY') == next90Days) {
+            if ( start.format('MMM D, YYYY') === next90Days) {
 
               $(".datepicker  span").text('Next 90 Days');
               $('#daterange').val(moment().format('YYYY-MM-DD') +'-'+ moment().add(90, 'days').format('YYYY-MM-DD'));
@@ -1229,7 +1228,6 @@
               $('#date_to_front').val(moment().add(1, 'month').endOf('month').format('YYYY-MM-DD'));
 
             }else {
-
               $(".datepicker span").html(start.format('MMM D, YYYY')+'-'+ end.format('MMM D, YYYY'));
               $('#daterange').val(start.format('YYYY-MM-DD')+'-'+end.format('YYYY-MM-DD'));
 
@@ -1276,7 +1274,7 @@
               "firstDay": 1,
             },
             ranges: {
-              'Next 90 Days': [moment().add(90, 'days'), moment().add(90, 'days')],
+              'Next 90 Days': [moment().add(90, 'days')],
               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
@@ -1313,7 +1311,7 @@
           var momentEndDate = moment(endDate).format('YYYY-MM-DD');
           var next90Days = moment().add(90, 'days').format('YYYY-MM-DD');
 
-          if(momentStartDate  === moment().format('YYYY-MM-DD') && momentEndDate === moment().add(90, 'days').format('YYYY-MM-DD') ) {
+          if( moment(startDate).add(90, 'days').format('YYYY-MM-DD')  === next90Days ) {
             $('.search-label h6 span').text('Next 90 Days');
 
             $(".datepicker span").text('Next 90 Days');
@@ -1375,6 +1373,7 @@
             $('#daterange').val( moment().add(1, 'month').startOf('month').format('YYYY-MM-DD') +'-' +  moment().add(1, 'month').endOf('month').format('YYYY-MM-DD'));
           
           } else {
+
             $('.search-label h6 span').html(moment(startDate).format('MMM D, YYYY') +' - ' + moment(endDate).format('MMM D, YYYY'));
             $(".datepicker span").html(moment(startDate).format('MMM D, YYYY') +' - ' + moment(endDate).format('MMM D, YYYY'));
 
